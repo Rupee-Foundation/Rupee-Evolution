@@ -12,9 +12,9 @@ Tribus Algo PoW/PoS Hybrid Cryptocurrency
 <a href="https://discord.gg/UPpQy3n"><img src="https://discordapp.com/api/guilds/334361453320732673/embed.png" alt="Discord server" /></a>
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/carsenk/rupeeevolution.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/carsenk/rupeeevolution.svg)
-[![Build Status](https://travis-ci.org/carsenk/rupeeevolution.svg?branch=master)](https://travis-ci.org/carsenk/rupeeevolution)
+[![Build Status](https://travis-ci.org/Rupee-Foundation/rupeeevolution.svg?branch=master)](https://travis-ci.org/carsenk/rupeeevolution)
 
-[![Build history](https://buildstats.info/travisci/chart/carsenk/rupeeevolution?branch=master)](https://travis-ci.org/carsenk/rupeeevolution?branch=master)
+[![Build history](https://buildstats.info/travisci/chart/carsenk/rupeeevolution?branch=master)](https://travis-ci.org/Rupee-Foundation/rupeeevolution?branch=master)
 
 Intro
 ==========================
