@@ -9,7 +9,7 @@
 #include "clientversion.h"
 
 //
-// Bootup the fortunastake, look for a 5000 D input and register on the network
+// Bootup the fortunastake, look for a 8400 RUPEE input and register on the network
 //
 void CActiveFortunastake::ManageStatus()
 {

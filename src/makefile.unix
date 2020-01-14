@@ -1,5 +1,5 @@
 # Copyright (c) 2009-2010 Satoshi Nakamoto
-# Copyright (c) 2017-2019 D e n a r i u s [D]
+# Copyright (c) 2017-2019 R u p e e E v o l u t i o n [RUPEE]
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -372,7 +372,7 @@ OBJS= \
 endif
 
 
-all: denariusd
+all: rupeeevolutiond
 
 #
 # LevelDB support
@@ -444,11 +444,11 @@ obj/anonymize.o: tor/anonymize.cpp
 	rm -f $(@:%.o=%.d)
 endif
 
-denariusd: $(OBJS:obj/%=obj/%)
+rupeeevolutiond: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f denariusd
+	-rm -f rupeeevolutiond
 	-rm -f obj/*.o
 	-rm -f obj/*.P
 	-rm -f obj/*.d

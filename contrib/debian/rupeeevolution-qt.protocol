@@ -1,6 +1,6 @@
 [Protocol]
-exec=denarius-qt '%u'
-protocol=denarius
+exec=rupeeevolution-qt '%u'
+protocol=rupeeevolution
 input=none
 output=none
 helper=true

@@ -1,9 +1,9 @@
-Building Denarius
+Building RupeeEvolution
 
-See doc/readme-qt.rst for instructions on building Denarius QT,
+See doc/readme-qt.rst for instructions on building RupeeEvolution QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of Denarius.
+implementation of RupeeEvolution.
 
-See doc/build-*.txt for instructions on building denariusd,
+See doc/build-*.txt for instructions on building rupeeevolutiond,
 the intended-for-services, no-graphical-interface, reference
-implementation of Denarius.
+implementation of RupeeEvolution.

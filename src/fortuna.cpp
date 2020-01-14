@@ -1,4 +1,4 @@
-// Copyright (c) 2017 The Denarius developers
+// Copyright (c) 2017 The RupeeEvolution developers
 // Copyright (c) 2009-2012 The Darkcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -45,9 +45,9 @@ int MIN_MN_PROTO_VERSION = 31000;
 /* *** BEGIN FORTUNA MAGIC  **********
     Copyright 2014, Darkcoin Developers
         eduffield - evan@darkcoin.io
-    Copyright 2018, Denarius Developers
-        carsenk - admin@denarius.io
-        enkayz - enkayz@denarius.io
+    Copyright 2018, RupeeEvolution Developers
+        carsenk - admin@rupeeevolution.io
+        enkayz - enkayz@rupeeevolution.io
 */
 
 int randomizeList (int i) { return std::rand()%i;}
@@ -940,7 +940,7 @@ bool CFortunaQueue::CheckSignature()
 void ThreadCheckForTunaPool(void* parg)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("denarius-mn");
+    RenameThread("rupeeevolution-mn");
 
     unsigned int c = 0;
     std::string errorMessage;

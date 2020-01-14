@@ -1,0 +1,2 @@
+debian/bin/rupeeevolutiond usr/bin
+src/rupeeevolutiond usr/lib/rupeeevolution

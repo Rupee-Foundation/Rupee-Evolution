@@ -171,7 +171,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // NovaCoin: check prefix
-    if(uri.scheme() != QString("denarius"))
+    if(uri.scheme() != QString("rupeeevolution"))
         return false;
 
     SendCoinsRecipient rv;
@@ -216,13 +216,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert denarius:// to denarius:
+    // Convert rupeeevolution:// to rupeeevolution:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("denarius://"))
+    if(uri.startsWith("rupeeevolution://"))
     {
-        uri.replace(0, 12, "denarius:");
+        uri.replace(0, 12, "rupeeevolution:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -343,7 +343,7 @@ void openConfigfile()
 {
     boost::filesystem::path pathConfig = GetConfigFile();
 
-    /* Open denarius.conf with the associated application */
+    /* Open rupeeevolution.conf with the associated application */
     if (boost::filesystem::exists(pathConfig))
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
@@ -384,7 +384,7 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Denarius.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "RupeeEvolution.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -466,7 +466,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "denarius.desktop";
+    return GetAutostartDir() / "rupeeevolution.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -507,7 +507,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a bitcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Denarius\n";
+        optionFile << "Name=RupeeEvolution\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -557,21 +557,21 @@ LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef
 
 bool GetStartOnSystemStartup()
 {
-    CFURLRef denariusAppURL = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFURLRef rupeeevolutionAppURL = CFBundleCopyBundleURL(CFBundleGetMainBundle());
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, denariusAppURL);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, rupeeevolutionAppURL);
     return !!foundItem; // return boolified object
 }
 
 bool SetStartOnSystemStartup(bool fAutoStart)
 {
-    CFURLRef denariusAppURL = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFURLRef rupeeevolutionAppURL = CFBundleCopyBundleURL(CFBundleGetMainBundle());
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, denariusAppURL);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, rupeeevolutionAppURL);
 
     if(fAutoStart && !foundItem) {
-        // add denarius app to startup item list
-        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, denariusAppURL, NULL, NULL);
+        // add rupeeevolution app to startup item list
+        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, rupeeevolutionAppURL, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {
         // remove item
@@ -590,10 +590,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("Denarius-Qt") + " " + tr("version") + " " +
+    header = tr("RupeeEvolution-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  denarius-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  rupeeevolution-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -602,7 +602,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("Denarius-Qt"));
+    setWindowTitle(tr("RupeeEvolution-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));

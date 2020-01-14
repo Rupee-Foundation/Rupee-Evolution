@@ -1,43 +1,43 @@
-# Denarius [D]
+# RupeeEvolution [RUPEE]
 Tribus Algo PoW/PoS Hybrid Cryptocurrency
 
 ![logo](http://i.imgur.com/gIe5vnw.png)
 
-[![GitHub version](https://img.shields.io/github/release/carsenk/denarius.svg)](https://badge.fury.io/gh/carsenk%2Fdenarius)
-[![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/carsenk/denarius/blob/master/COPYING)
-[![Denarius downloads](https://img.shields.io/github/downloads/carsenk/denarius/total.svg?maxAge=2592000)](https://github.com/carsenk/denarius/releases)
+[![GitHub version](https://img.shields.io/github/release/carsenk/rupeeevolution.svg)](https://badge.fury.io/gh/carsenk%2Frupeeevolution)
+[![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Rupee-Foundation/rupeeevolution/blob/master/COPYING)
+[![RupeeEvolution downloads](https://img.shields.io/github/downloads/carsenk/rupeeevolution/total.svg?maxAge=2592000)](https://github.com/Rupee-Foundation/rupeeevolution/releases)
 [![Join the chat at https://discord.gg/AcThv2y](https://img.shields.io/badge/Discord-Chat-blue.svg?logo=discord)](https://discord.gg/AcThv2y)
 
-[![HitCount](http://hits.dwyl.io/carsenk/denarius.svg)](http://hits.dwyl.io/carsenk/denarius)
+[![HitCount](http://hits.dwyl.io/carsenk/rupeeevolution.svg)](http://hits.dwyl.io/carsenk/rupeeevolution)
 <a href="https://discord.gg/UPpQy3n"><img src="https://discordapp.com/api/guilds/334361453320732673/embed.png" alt="Discord server" /></a>
 
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/carsenk/denarius.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/carsenk/denarius.svg)
-[![Build Status](https://travis-ci.org/carsenk/denarius.svg?branch=master)](https://travis-ci.org/carsenk/denarius)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/carsenk/rupeeevolution.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/carsenk/rupeeevolution.svg)
+[![Build Status](https://travis-ci.org/carsenk/rupeeevolution.svg?branch=master)](https://travis-ci.org/carsenk/rupeeevolution)
 
-[![Build history](https://buildstats.info/travisci/chart/carsenk/denarius?branch=master)](https://travis-ci.org/carsenk/denarius?branch=master)
+[![Build history](https://buildstats.info/travisci/chart/carsenk/rupeeevolution?branch=master)](https://travis-ci.org/carsenk/rupeeevolution?branch=master)
 
 Intro
 ==========================
-Denarius is a true optional anonymous, untraceable, and secure hybrid cryptocurrency.
+RupeeEvolution is a true optional anonymous, untraceable, and secure hybrid cryptocurrency.
 
-Ticker: D
+Ticker: INN
 
-Denarius [D] is an anonymous, untraceable, energy efficient, Proof-of-Work (New Tribus Algorithm) and Proof-of-Stake cryptocurrency.
-10,000,000 D will be created in approx. about 3 years during the PoW phase. Denarius had a 10% Premine of 1,000,000 D for bounties, distribution, and marketing.
+RupeeEvolution [RUPEE] is an anonymous, untraceable, energy efficient, Proof-of-Work (New Tribus Algorithm) and Proof-of-Stake cryptocurrency.
+84,000,000 RUPEE will be created in approx. about 15 years during the PoW phase. RupeeEvolution had a % Premine of 22,000,000 RUPEE for SWAP, distribution, and marketing.
 
 Specifications
 ==========================
-* Total number of coins: 10,000,000 D
-* Ideal block time: 30 seconds
-* Stake interest: 6% annual static inflation
+* Total number of coins: 84,000,000 RUPEE
+* Ideal block time: 15 seconds
+* Stake interest: 10% annual static inflation
 * Confirmations: 10 blocks
-* Maturity: 30 blocks (15 minutes)
-* Min stake age: 8 hours
-* Cost of Hybrid Fortuna Stakes: 5,000 D
-* Hybrid Fortuna Stake Reward: 33% of the current block reward
-* P2P Port: 33369, Testnet Port: 33368
-* RPC Port: 32369, Testnet RPC Port: 32368
-* Fortuna Stake Port: 9999, Testnet Port: 19999
+* Maturity: 75 blocks
+* Min stake age: 24 hours
+* Cost of Hybrid Fortuna Stakes: 84,000 RUPEE
+* Hybrid Fortuna Stake Reward: 70% of the current block reward
+* P2P Port: 64630, Testnet Port: 64631
+* RPC Port: 64634, Testnet RPC Port: 64635
+* Fortuna Stake Port: 64638, Testnet Port: 64639
 
 Technology
 ==========================
@@ -50,37 +50,29 @@ Technology
 * Atomic Swaps using UTXOs (BIP65 CLTV)
 * BIP39 Support (Coin Type 114)
 * Proof of Data (Image/Data Timestamping)
-* Fast 30 Second Block Times
-* New/First Tribus PoW Algorithm comprising of 3 NIST5 algorithms
+* Fast 15 Second Block Times
+* Tribus PoW Algorithm comprising of 3 NIST5 algorithms
 * Tribus PoW/PoS Hybrid
 * Full decentralization
 
 LINKS
 ==========================
-* Official Website(https://denarius.io/)
-* Official Forums(https://denariustalk.org/)
-* Denarius Twitter(https://twitter.com/denariuscoin)
-* Denarius Discord Chat(https://discord.gg/C64HXbc)
+* Official Website(https://rupeeevolution.io/)
+* Official Forums(https://rupeeevolutiontalk.org/)
+* RupeeEvolution Twitter(https://twitter.com/rupeeevolutioncoin)
+* RupeeEvolution Discord Chat(https://discord.gg/C64HXbc)
 
-ASCII CAST TUTORIALS
-==========================
-[![asciicast](https://asciinema.org/a/179356.png)](https://asciinema.org/a/179356)
-[![asciicast](https://asciinema.org/a/179362.png)](https://asciinema.org/a/179362)
-[![asciicast](https://asciinema.org/a/179355.png)](https://asciinema.org/a/179355)
-
-denariusqtubuntu.sh by Buzzkillb
+rupeeevolutionqtubuntu.sh by Buzzkillb
 ===========================
-Compile the latest Denarius QT (Graphical Wallet) Ubuntu 16.04 or Ubuntu 18.04.1
+Compile the latest RupeeEvolution QT (Graphical Wallet) Ubuntu 16.04 or Ubuntu 18.04.1
 
-Credits to Buzzkillb for the creation of this bash script, original repository: https://github.com/buzzkillb/denarius-qt/
+Credits to Buzzkillb for the creation of the original bash script, original repository: https://github.com/buzzkillb/denarius-qt/
 
-Compiles Denarius QT Ubuntu 16.04 or 18.04, Grabs latest chaindata, and populates denarius.conf with addnodes or can update a previous compile to the latest master branch.  
-```bash -c "$(wget -O - https://raw.githubusercontent.com/carsenk/denarius/master/denariusqtubuntu.sh)"```  
+Compiles RupeeEvolution QT Ubuntu 16.04 or 18.04, Grabs latest chaindata, and populates rupeeevolution.conf with addnodes or can update a previous compile to the latest master branch.  
+```bash -c "$(wget -O - https://raw.githubusercontent.com/RupeeEvolution/rupeeevolution/master/rupeeevolutionqtubuntu.sh)"```  
 
-To turn on nativetor in denarius.conf  
+To turn on nativetor in rupeeevolution.conf  
 ```nativetor=1```  
-
-![Denarius Installer Menu](https://raw.githubusercontent.com/buzzkillb/denarius-qt/master/compile-menu.PNG)  
 
 Development process
 ===========================
@@ -95,7 +87,7 @@ or are controversial.
 
 The master branch is regularly built and tested, but is not guaranteed
 to be completely stable. Tags are regularly created to indicate new
-stable release versions of Denarius.
+stable release versions of Rupee Evolution.
 
 Feature branches are created when there are major new features being
 worked on by several people.

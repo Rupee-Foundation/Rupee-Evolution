@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Rupee Evolution
+Comment=RupeeEvolution P2P Cryptocurrency
+Comment[fr]=RupeeEvolution, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=RupeeEvolution, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/RupeeEvolution
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/rupeeevolution;
+Categories=Office;

@@ -25,7 +25,7 @@ USE_UPNP:=1
 LIBS= -dead_strip
 
 ifdef STATIC
-# Build STATIC if you are redistributing the denariusd binary
+# Build STATIC if you are redistributing the rupeeevolutiond binary
 LIBS += \
  $(DEPSDIR)/lib/db48/libdb_cxx-4.8.a \
  $(DEPSDIR)/lib/libboost_system-mt.a \
@@ -124,7 +124,7 @@ else
 endif
 endif
 
-all: denariusd
+all: rupeeevolutiond
 
 #
 # LevelDB support
@@ -180,11 +180,11 @@ obj/%.o: json/%.cpp
 	-e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	rm -f $(@:%.o=%.d)
 
-denariusd: $(OBJS:obj/%=obj/%)
+rupeeevolutiond: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f denariusd
+	-rm -f rupeeevolutiond
 	-rm -f obj/*.o
 	-rm -f obj/*.P
 	-rm -f obj/*.d

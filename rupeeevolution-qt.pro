@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = Denarius
-VERSION = 3.3.8.5
+TARGET = Rupee Evolution
+VERSION = 1.3.8.5
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
@@ -84,7 +84,7 @@ lessThan(QT_MAJOR_VERSION, 5): win32: QMAKE_LFLAGS *= -static
 # use: qmake "USE_NATIVETOR=1" ( enabled by default; default)
 #  or: qmake "USE_NATIVETOR=0" (disabled by default)
 #  or: qmake "USE_NATIVETOR=-" (not supported)
-# D E N A R I U S Native Tor - USE_NATIVETOR=- to not compile with the Tor C Library by Tor Project located in src/tor
+#R U P E E E V O L U T I O N Native Tor - USE_NATIVETOR=- to not compile with the Tor C Library by Tor Project located in src/tor
 contains(USE_NATIVETOR, -) {
     message(Building without Native Tor support)
 } else {
@@ -94,7 +94,7 @@ contains(USE_NATIVETOR, -) {
     }
     DEFINES += USE_NATIVETOR=$$USE_NATIVETOR
     INCLUDEPATH += src/tor
-	
+
 	### Tor native integration sources
 	SOURCES += src/tor/anonymize.cpp \
 		src/tor/address.c \
@@ -628,7 +628,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/fortunastakeconfig.cpp \
     src/spork.cpp
 
-#### D e n a r i u s sources
+####R u p e e E v o l u t i o nsources
 
 RESOURCES += \
     src/qt/bitcoin.qrc \
@@ -746,8 +746,8 @@ macx:HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/denarius.icns
-macx:TARGET = "Denarius"
+macx:ICON = src/qt/res/icons/rupeeevolution.icns
+macx:TARGET = "RupeeEvolution"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.9

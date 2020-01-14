@@ -3,11 +3,10 @@
 
 //
 // client versioning
-// Codename C A R S E N  W A S  H E R E
 //
 
 // These need to be macros, as version.cpp's and bitcoin-qt.rc's voodoo requires it
-#define CLIENT_VERSION_MAJOR       3
+#define CLIENT_VERSION_MAJOR       1
 #define CLIENT_VERSION_MINOR       3
 #define CLIENT_VERSION_REVISION    8
 #define CLIENT_VERSION_BUILD       5

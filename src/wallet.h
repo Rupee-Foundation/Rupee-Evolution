@@ -349,7 +349,7 @@ public:
     bool SendStealthMoneyToDestination(CStealthAddress& sxAddress, int64_t nValue, std::string& sNarr, CWalletTx& wtxNew, std::string& sError, bool fAskFee=false);
     bool FindStealthTransactions(const CTransaction& tx, mapValue_t& mapNarr);
 
-    // Ring Sigs - v3 D e n a r i u s
+    // Ring Sigs - v3 R u p e e E v o l u t i o n
     bool UpdateAnonTransaction(CTxDB* ptxdb, const CTransaction& tx, const uint256& blockHash);	
 	bool UndoAnonTransaction(const CTransaction& tx, const std::map<CKeyID, CStealthAddress> * const mapPubStealth=NULL);
     bool ProcessAnonTransaction(CWalletDB *pwdb, CTxDB *ptxdb, const CTransaction& tx, const uint256& blockHash, bool& fIsMine, mapValue_t& mapNarr, std::vector<std::map<uint256, CWalletTx>::iterator>& vUpdatedTxns, const std::map<CKeyID, CStealthAddress> * const mapPubStealth=NULL);
@@ -519,7 +519,7 @@ public:
     DBErrors LoadWallet(bool& fFirstRunRet);
     DBErrors ZapWalletTx(std::vector<CWalletTx>& vWtx);
 
-    //D E N A R I U S
+    //R U P E E E V O L U T I O N
     bool SetAddressBookName(const CTxDestination& address, const std::string& strName);
     bool DelAddressBookName(const CTxDestination& address);
 

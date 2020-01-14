@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2017-2019 Denarius developers
+// Copyright (c) 2017-2019 RupeeEvolution developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -275,7 +275,7 @@ bool CWallet::Unlock(const SecureString& strWalletPassphrase)
         }
 
         UnlockStealthAddresses(vMasterKey);
-		ProcessLockedAnonOutputs(); //Process Locked Anon Outputs when unlocked, D E N A R I U S - v3.1
+		ProcessLockedAnonOutputs(); //Process Locked Anon Outputs when unlocked,R U P E E E V O L U T I O N - v3.1
         SecureMsgWalletUnlocked();
         return true;
     }
@@ -916,7 +916,7 @@ int64_t CWallet::GetAnonDebit(const CTxIn& txin) const
     if (!txin.IsAnonInput())
         return 0;
 
-    // -- amount of owned denarius decreased
+    // -- amount of owned rupeeevolution decreased
     // TODO: store links in memory
 
     {
@@ -1903,7 +1903,7 @@ static void ApproximateBestSubset(vector<pair<int64_t, pair<const CWalletTx*,uns
     }
 }
 
-// denarius: total coins available for staking - WIP needs updating
+// rupeeevolution: total coins available for staking - WIP needs updating
 int64_t CWallet::GetStakeAmount() const
 {
     int64_t nTotal = 0;
@@ -2573,7 +2573,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend, 
                 int64_t nTotalValue = nValue + nFeeRet;
                 double dPriority = 0;
 
-                // vouts to the payees with UTXO splitter - D E N A R I U S
+                // vouts to the payees with UTXO splitter - R U P E E E V O L U T I O N
                 if(coinControl && !coinControl->fSplitBlock)
                 {
                     BOOST_FOREACH (const PAIRTYPE(CScript, int64_t)& s, vecSend)
@@ -4214,7 +4214,7 @@ DBErrors CWallet::LoadWallet(bool& fFirstRunRet)
     return DB_LOAD_OK;
 }
 
-//D E N A R I U S
+//R U P E E E V O L U T I O N
 bool CWallet::SetAddressBookName(const CTxDestination& address, const string& strName)
 {
     bool fOwned;
@@ -5211,7 +5211,7 @@ bool CWallet::ProcessAnonTransaction(CWalletDB *pwdb, CTxDB *ptxdb, const CTrans
             };
 
             //CKey ckey;
-            //ckey.Set(&sSpendR.e[0], true); D E N A R I U S ProcessAnonTransaction()
+            //ckey.Set(&sSpendR.e[0], true);R U P E E E V O L U T I O N ProcessAnonTransaction()
 
 			CKey ckey;
 			CSecret vchSecret;
@@ -6920,7 +6920,7 @@ bool CWallet::SendDToAnon(CStealthAddress& sxAddress, int64_t nValue, std::strin
 
     if (vNodes.empty())
     {
-        sError = _("Error: Denarius is not connected!");
+        sError = _("Error: RupeeEvolution is not connected!");
         return false;
     };
 
@@ -7035,7 +7035,7 @@ bool CWallet::SendAnonToAnon(CStealthAddress& sxAddress, int64_t nValue, int nRi
 
     if (vNodes.empty())
     {
-        sError = _("Error: Denarius is not connected!");
+        sError = _("Error: RupeeEvolution is not connected!");
         return false;
     };
 
@@ -7131,7 +7131,7 @@ bool CWallet::SendAnonToD(CStealthAddress& sxAddress, int64_t nValue, int nRingS
 
     if (vNodes.empty())
     {
-        sError = _("Error: Denarius is not connected!");
+        sError = _("Error: RupeeEvolution is not connected!");
         return false;
     };
 

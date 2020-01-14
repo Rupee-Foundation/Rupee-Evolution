@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2017-2018 The Denarius developers
+// Copyright (c) 2017-2018 The RupeeEvolution developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -44,12 +44,12 @@ CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 
 // Block Variables
 
-unsigned int nTargetSpacing     = 30;               // 30 seconds, FAST
-unsigned int nStakeMinAge       = 8 * 60 * 60;      // 8 hour min stake age
+unsigned int nTargetSpacing     = 15;               // ~15 seconds
+unsigned int nStakeMinAge       = 24 * 60 * 60;      // 24 hour min stake age
 unsigned int nStakeMaxAge       = -1;               // unlimited
 unsigned int nModifierInterval  = 10 * 60;          // time to elapse before new modifier is computed
 int64_t nLastCoinStakeSearchTime = GetAdjustedTime();
-int nCoinbaseMaturity = 20; //30 on Mainnet D e n a r i u s, 20 for testnet
+int nCoinbaseMaturity = 40; //30 on Mainnet R u p e e E v o l u t i o n
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 bool FortunaReorgBlock = true;
@@ -78,7 +78,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Denarius Signed Message:\n";
+const string strMessageMagic = "RupeeEvolution Signed Message:\n";
 
 // Settings
 int64_t nTransactionFee = MIN_TX_FEE;
@@ -792,7 +792,7 @@ bool CTransaction::CheckTransaction() const
 
     if (nVersion == ANON_TXN_VERSION)
     {
-        // -- Prevent Anon TXs in mainnet until after block 1,350,000 (1.35m Million) ~ D e n a r i u s
+        // -- Prevent Anon TXs in mainnet until after block 1,350,000 (1.35m Million) ~ R u p e e E v o l u t i o n
 
         if (!fTestNet && nBestHeight < 1350000)
         {
@@ -1540,14 +1540,38 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 	if (pindexBest->nHeight == 1)
 		nSubsidy = 1000000 * COIN;  // 10% Premine
 	else if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK) // Block 210, Instamine prevention
-        nSubsidy = 1 * COIN/2;
-	else if (pindexBest->nHeight <= 1000000) // Block 1m ~ 3m D (33% will go to hybrid fortunastakes)
-		nSubsidy = 3 * COIN;
-	else if (pindexBest->nHeight <= 2000000) // Block 2m ~ 4m D
-		nSubsidy = 4 * COIN;
-	else if (pindexBest->nHeight <= 3000000) // Block 3m ~ 3m D
-		nSubsidy = 3 * COIN;
-    else if (pindexBest->nHeight > LAST_POW_BLOCK) // Block 3m
+        nSubsidy = 0.002 * COIN/2;
+	else if (pindexBest->nHeight <= 600000) //
+		nSubsidy = 0.1 * COIN;
+	else if (pindexBest->nHeight <= 1200000) //
+		nSubsidy = 0.2 * COIN;
+	else if (pindexBest->nHeight <= 1800000) //
+		nSubsidy = 0.4 * COIN;
+  else if (pindexBest->nHeight <= 2200000) //
+  	nSubsidy = 0.5 * COIN;
+	else if (pindexBest->nHeight <= 4300000) //
+  	nSubsidy = 0.42 * COIN;
+	else if (pindexBest->nHeight <= 6400000) //
+  	nSubsidy = 0.35 * COIN;
+  else if (pindexBest->nHeight <= 8500000) //
+		nSubsidy = 0.29 * COIN;
+	else if (pindexBest->nHeight <= 10600000) //
+  	nSubsidy = 0.24 * COIN;
+  else if (pindexBest->nHeight <= 12700000) //
+  	nSubsidy = 0.2 * COIN;
+  else if (pindexBest->nHeight <= 14800000) //
+  	nSubsidy = 0.17 * COIN;
+  else if (pindexBest->nHeight <= 16900000) //
+  	nSubsidy = 0.15 * COIN;
+  else if (pindexBest->nHeight <= 19000000) //
+  	nSubsidy = 0.14 * COIN;
+  else if (pindexBest->nHeight <= 21100000) //
+  	nSubsidy = 0.07 * COIN;
+  else if (pindexBest->nHeight <= 23200000) //
+  	nSubsidy = 0.01 * COIN;
+  else if (pindexBest->nHeight <= 31600000) //
+  	nSubsidy = 0.01 * COIN;
+  else if (pindexBest->nHeight > LAST_POW_BLOCK) //
 		nSubsidy = 0; // PoW Ends
 
     if (fDebug && GetBoolArg("-printcreation"))
@@ -1556,7 +1580,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
     return nSubsidy + nFees;
 }
 
-const int YEARLY_BLOCKCOUNT = 1051896; // Amount of Blocks per year
+const int YEARLY_BLOCKCOUNT = 2103792; // Amount of Blocks per year
 
 // Proof of Stake miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
@@ -1565,12 +1589,12 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
         return nFees;
 
     int64_t nRewardCoinYear;
-    nRewardCoinYear = COIN_YEAR_REWARD; // 0.06 6%
+    nRewardCoinYear = COIN_YEAR_REWARD; // 0.1 10%
 
     int64_t nSubsidy;
     nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN;
 
-    //PoS Fixed on Block 640k v2.0+ DeNaRiUs
+    //PoS Fixed on Block 500 v2.0+ RuPeEeVoLuTiOn
     if (pindexBest->nHeight >= MAINNET_POSFIX || fTestNet)
         nSubsidy = nCoinAge * nRewardCoinYear / 365;
 
@@ -1580,7 +1604,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
     return nSubsidy + nFees;
 }
 
-static const int64_t nTargetTimespan = 60;
+static const int64_t nTargetTimespan = 30;
 
 //
 // maximum nBits value could possible be required nTime after
@@ -1707,7 +1731,7 @@ bool IsInitialBlockDownload()
         GetFortunastakeRanks(pindexBest);
     }
     return state;
-	
+
 }
 
 void static InvalidChainFound(CBlockIndex* pindexNew)
@@ -1891,7 +1915,7 @@ bool CTransaction::FetchInputs(CTxDB& txdb, const map<uint256, CTxIndex>& mapTes
     return true;
 }
 
-// Ring Signatures - D e n a r i u s
+// Ring Signatures - R u p e e E v o l u t i o n
 static bool CheckAnonInputAB(CTxDB &txdb, const CTxIn &txin, int i, int nRingSize, std::vector<uint8_t> &vchImage, uint256 &preimage, int64_t &nCoinValue)
 {
     const CScript &s = txin.scriptSig;
@@ -2525,7 +2549,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
 
     // ----------- fortunastake payments -----------
     // Once upon a time, People were really interested in D.
-    // So much so, People wanted to bring D to the moon. Even Mars, Sooner than the roadster...
+    // So much so, People wanted to bring RUPEE to the moon. Even Mars, Sooner than the roadster...
     // The Discord was active, People discussed how they would reach that goal.
     // There was one person, named Thi3rryzz watching all this from a save distance.
     // Then, the word FORTUNASTAKES came to the table.
@@ -2547,7 +2571,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
     // for all of eternity
 
 
-    // ----- Denarius fortuna stakes, the fair payment edition  -----
+    // ----- RupeeEvolution fortuna stakes, the fair payment edition  -----
     // proudly presented by enkayz
 
     bool FortunastakePayments = false;
@@ -3591,7 +3615,7 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
         }
     }
 
-    // Denarius: ask for pending sync-checkpoint if any
+    // RupeeEvolution: ask for pending sync-checkpoint if any
     if (!IsInitialBlockDownload()){
 
         Checkpoints::AskForPendingSyncCheckpoint(pfrom);
@@ -3780,7 +3804,7 @@ bool CheckDiskSpace(uint64_t nAdditionalBytes)
         string strMessage = _("Warning: Disk space is low!");
         strMiscWarning = strMessage;
         printf("*** %s\n", strMessage.c_str());
-        uiInterface.ThreadSafeMessageBox(strMessage, "Denarius", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox(strMessage, "RupeeEvolution", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
         StartShutdown();
         return false;
     }
@@ -3840,10 +3864,10 @@ bool LoadBlockIndex(bool fAllowNew)
 
     if (fTestNet)
     {
-        pchMessageStart[0] = 0x07;
-        pchMessageStart[1] = 0x11;
-        pchMessageStart[2] = 0x05;
-        pchMessageStart[3] = 0x0b;
+        pchMessageStart[0] = 0x67;
+        pchMessageStart[1] = 0x41;
+        pchMessageStart[2] = 0x25;
+        pchMessageStart[3] = 0x0a;
 
         bnProofOfWorkLimit = bnProofOfWorkLimitTestNet; // 16 bits PoW target limit for testnet
         nStakeMinAge = 1 * 60 * 60; // test net min age is 1 hour
@@ -3867,9 +3891,9 @@ bool LoadBlockIndex(bool fAllowNew)
         if (!fAllowNew)
             return false;
 
-        const char* pszTimestamp = "http://www.coindesk.com/bitcoin-scaling-give-everyone-control/";
+        const char* pszTimestamp = "The RuPeEeVoLuTiOn starts now!";
         CTransaction txNew;
-        txNew.nTime = 1497476511;
+        txNew.nTime = 1578975595;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -3879,14 +3903,14 @@ bool LoadBlockIndex(bool fAllowNew)
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
-        block.nTime    = 1497476511;
+        block.nTime    = 1578975595;
         block.nVersion = 1;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-		    block.nNonce   = 41660;
+		    block.nNonce   = 0;
 
 		    if(fTestNet)
         {
-            block.nNonce   = 13278;
+            block.nNonce   = 0;
         }
         if (false && (block.GetHash() != hashGenesisBlock)) {
 
@@ -3911,7 +3935,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
 
         //// debug print
-        assert(block.hashMerkleRoot == uint256("0xc6d8e8f56c25cac33567e571a3497bfc97f715140fcfe16d971333b38e4ee0f2"));
+        assert(block.hashMerkleRoot == uint256("0x"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
@@ -5357,8 +5381,8 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 int64_t GetFortunastakePayment(int nHeight, int64_t blockValue)
 {
-    //int64_t ret = blockValue * 1/3; //33%
-	int64_t ret = static_cast<int64_t>(blockValue * 1/3); //33%
+
+	int64_t ret = static_cast<int64_t>(blockValue * 7/10); //70%
 
     return ret;
 }

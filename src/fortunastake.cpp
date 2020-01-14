@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The DarkCoin developers
-// Copyright (c) 2018 The Denarius developers
+// Copyright (c) 2018 The RupeeEvolution developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include "fortunastake.h"
@@ -51,7 +51,7 @@ void ProcessFortunastakeConnections(){
         if(forTunaPool.submittedToFortunastake == pnode->addr) continue;
 
         if( pnode->fForTunaMaster ||
-            (pnode->addr.GetPort() == 9999 && pnode->nStartingHeight > (nBestHeight - 120)) // disconnect fortunastakes that were in sync when they connected recently
+            (pnode->addr.GetPort() == 64638 && pnode->nStartingHeight > (nBestHeight - 120)) // disconnect fortunastakes that were in sync when they connected recently
                 )
         {
             printf("Closing fortunastake connection %s \n", pnode->addr.ToString().c_str());
@@ -128,7 +128,7 @@ void ProcessMessageFortunastake(CNode* pfrom, std::string& strCommand, CDataStre
             return;
         }
 
-        if((fTestNet && addr.GetPort() != 19999) || (!fTestNet && addr.GetPort() != 9999)) return;
+        if((fTestNet && addr.GetPort() != 64639) || (!fTestNet && addr.GetPort() != 64638)) return;
 
         //search existing fortunastake list, this is where we update existing fortunastakes with new dsee broadcasts
 	      LOCK(cs_fortunastakes);
