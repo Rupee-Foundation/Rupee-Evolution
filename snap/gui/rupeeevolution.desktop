@@ -1,0 +1,15 @@
+# http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-1.0.html
+[Desktop Entry]
+Type=Application
+Version=master
+Encoding=UTF-8
+Name=Rupee Evolution
+Icon=${SNAP}/meta/gui/rupeeevolution128.png
+MimeType=x-scheme-handler/rupeeevolution;
+Exec=rupeeevolution
+Terminal=false
+Categories=Office;Finance;
+Comment=RupeeEvolution P2P Cryptocurrency
+Keywords=internet;bitcoin;rupeeevolution;innova;denarius;
+Comment[fr]=RupeeEvolution, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=RupeeEvolution, eşten eşe kriptografik sanal para birimi

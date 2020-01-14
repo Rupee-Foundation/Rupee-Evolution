@@ -1,6 +1,6 @@
-# Innova - Snapcraft Build - Known to build in Ubuntu 18.04+ - WIP Currently as of Innova v3.3.8.5
-# https://innovacoin.io
-# https://github.com/innova-foundation/innova
+# RupeeEvolution - Snapcraft Build - Known to build in Ubuntu 18.04+ - WIP Currently as of RupeeEvolution v3.3.8.5
+# https://.io
+# https://github.com/Rupee-Foundation/Rupee-Evolution
 # By Carsen Klock - Edited by CircuitBreaker
 name: rupeeevolution
 version: '1.3.8.5'
@@ -132,7 +132,7 @@ parts:
       cd src
       OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib make -f "${MF}" -j4
       cp $SNAPCRAFT_PART_BUILD/src/rupeeevolutiond $SNAPCRAFT_PART_INSTALL/bin
-  innova:
+  rupeeevolution:
     source: https://github.com/Rupee-Foundation/Rupee-Evolution.git
     source-type: git
     source-tag: master
@@ -211,7 +211,7 @@ parts:
       fi
       qmake "USE_UPNP=1" "USE_QRCODE=1" "${MF}" OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib innova-qt.pro
       OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib make -j4
-      cp Innova $SNAPCRAFT_PART_INSTALL/bin
+      cp RupeeEvolution $SNAPCRAFT_PART_INSTALL/bin
     after: [desktop-qt5]
   desktop:
     source: snap/gui
