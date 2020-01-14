@@ -1241,7 +1241,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
        FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
        if (configFile != NULL) {
            WriteConfigFile(configFile);
-           fclose(configFile);
+          // fclose(configFile);
            printf("WriteConfigFile() rupeeevolution.conf Setup Successfully!");
            ReadConfigFile(mapSettingsRet, mapMultiSettingsRet);
        } else {
