@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = Rupee Evolution
+TARGET = RupeeEvolution
 VERSION = 1.3.8.5
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE

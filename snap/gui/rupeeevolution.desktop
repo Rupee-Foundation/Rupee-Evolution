@@ -3,7 +3,7 @@
 Type=Application
 Version=master
 Encoding=UTF-8
-Name=Rupee Evolution
+Name=RupeeEvolution
 Icon=${SNAP}/meta/gui/rupeeevolution128.png
 MimeType=x-scheme-handler/rupeeevolution;
 Exec=rupeeevolution
