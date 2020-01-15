@@ -8,8 +8,8 @@ Tribus Algo PoW/PoS Hybrid Cryptocurrency
 [![RupeeEvolution downloads](https://img.shields.io/github/downloads/Rupee-Foundation/Rupee-Evolution/total.svg?maxAge=2592000)](https://github.com/Rupee-Foundation/Rupee-Evolution/releases)
 [![Join the chat at https://discord.gg/AcThv2y](https://img.shields.io/badge/Discord-Chat-blue.svg?logo=discord)](https://discord.gg/AcThv2y)
 
-[![HitCount](http://hits.dwyl.io/carsenk/rupeeevolution.svg)](http://hits.dwyl.io/Rupee-Foundation/Rupee-Evolution)
-<a href="https://discord.gg/UPpQy3n"><img src="https://discordapp.com/api/guilds/334361453320732673/embed.png" alt="Discord server" /></a>
+[![HitCount](http://hits.dwyl.io/Rupee-Foundation/Rupee-Evolution.svg)](http://hits.dwyl.io/Rupee-Foundation/Rupee-Evolution)
+<a href="https://discord.gg/rqQ9fUW"><img src="https://discordapp.com/api/guilds/334361453320732673/embed.png" alt="Discord server" /></a>
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Rupee-Foundation/Rupee-Evolution.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/Rupee-Foundation/Rupee-Evolution.svg)
 
