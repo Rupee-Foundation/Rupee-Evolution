@@ -47,7 +47,7 @@
       <string notr="true">color: #FFF;font-size:26px;font-weight:600;</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20px;font-weight:600; color:#767676;&quot;&gt;RupeeEvolution Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20px;font-weight:600; color:#767676;&quot;&gt;Rupee Evolution Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -442,7 +442,7 @@
         <string notr="true">color:#61696c;</string>
        </property>
        <property name="text">
-        <string>D</string>
+        <string>RUPEE</string>
        </property>
       </widget>
      </item>
