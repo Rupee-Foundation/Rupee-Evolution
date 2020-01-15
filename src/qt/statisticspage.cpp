@@ -17,9 +17,9 @@ StatisticsPage::StatisticsPage(QWidget *parent) :
     ui(new Ui::StatisticsPage)
 {
     ui->setupUi(this);
-    
+
     setFixedSize(400, 420);
-    
+
     connect(ui->startButton, SIGNAL(pressed()), this, SLOT(updateStatistics()));
 }
 
@@ -54,29 +54,77 @@ void StatisticsPage::updateStatistics()
     QString stakemin = QString::number(nMinWeight);
     QString stakemax = QString::number(nNetworkWeight);
     QString phase = "";
-    if (pindexBest->nHeight < 3000000)
+    if (pindexBest->nHeight < 31600000)
     {
         phase = "Tribus Proof of Work with Proof of Stake";
     }
-    else if (pindexBest->nHeight > 3000000)
+    else if (pindexBest->nHeight > 31600000)
     {
         phase = "Proof of Stake";
     }
 
     QString subsidy = "";
-	if (pindexBest->nHeight < 1000000)
+	if (pindexBest->nHeight < 600000)
     {
-        subsidy = "3 D per block";
+        subsidy = "0.1 RUPEE per block";
     }
-	else if (pindexBest->nHeight < 2000000)
+	else if (pindexBest->nHeight < 1200000)
     {
-        subsidy = "4 D per block";
+        subsidy = "0.2 RUPEE per block";
     }
-	else if (pindexBest->nHeight < 3000000)
+	else if (pindexBest->nHeight < 1800000)
     {
-        subsidy = "3 D per block";
+        subsidy = "0.4 RUPEE per block";
     }
-    else if (pindexBest->nHeight > 3000000)
+  else if (pindexBest->nHeight < 2200000)
+    {
+        subsidy = "0.5 RUPEE per block";
+    }
+	else if (pindexBest->nHeight < 4300000)
+    {
+        subsidy = "0.42 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 6400000)
+    {
+        subsidy = "0.35 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 8500000)
+    {
+        subsidy = "0.29 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 10600000)
+    {
+        subsidy = "0.24 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 12700000)
+    {
+        subsidy = "0.2 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 14800000)
+    {
+        subsidy = "0.17 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 16900000)
+    {
+        subsidy = "0.15 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 19000000)
+    {
+        subsidy = "0.14 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 21100000)
+    {
+        subsidy = "0.07 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 23200000)
+    {
+        subsidy = "0.01 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 31600000)
+    {
+        subsidy = "0.01 RUPEE per block";
+    }
+    else if (pindexBest->nHeight > 31600000)
     {
         subsidy = "No PoW Reward";
     }
@@ -87,62 +135,62 @@ void StatisticsPage::updateStatistics()
 
     QString QPeers = QString::number(peers);
     QString qVolume = QString::number(volume);
-	QString mn = "5,000 D";
-	QString mn2 = "33% of PoW/PoS block reward";
-	
-	ui->mncost->setText("<b><font color=\"orange\">" + mn + "</font></b>");	
-	ui->mnreward->setText("<b><font color=\"orange\">" + mn2 + "</font></b>");
+	QString mn = "8,400 RUPEE";
+	QString mn2 = "70% of PoW/PoS block reward";
+
+	ui->mncost->setText("<b><font color=\"teal\">" + mn + "</font></b>");
+	ui->mnreward->setText("<b><font color=\"teal\">" + mn2 + "</font></b>");
 
     if(nHeight > heightPrevious)
     {
         ui->heightBox->setText("<b><font color=\"yellow\">" + height + "</font></b>");
     } else {
-		ui->heightBox->setText("<b><font color=\"orange\">" + height + "</font></b>");
+		ui->heightBox->setText("<b><font color=\"teal\">" + height + "</font></b>");
     }
 
     if(0 > stakeminPrevious)
     {
         ui->minBox->setText("<b><font color=\"yellow\">" + stakemin + "</font></b>");
     } else {
-    ui->minBox->setText("<b><font color=\"orange\">" + stakemin + "</font></b>");
+    ui->minBox->setText("<b><font color=\"teal\">" + stakemin + "</font></b>");
     }
     if(0 > stakemaxPrevious)
     {
         ui->maxBox->setText("<b><font color=\"yellow\">" + stakemax + "</font></b>");
     } else {
-    ui->maxBox->setText("<b><font color=\"orange\">" + stakemax + "</font></b>");
+    ui->maxBox->setText("<b><font color=\"teal\">" + stakemax + "</font></b>");
     }
 
     if(phase != stakecPrevious)
     {
         ui->cBox->setText("<b><font color=\"yellow\">" + phase + "</font></b>");
     } else {
-    ui->cBox->setText("<b><font color=\"orange\">" + phase + "</font></b>");
+    ui->cBox->setText("<b><font color=\"teal\">" + phase + "</font></b>");
     }
-    
+
     if(subsidy != rewardPrevious)
     {
         ui->rewardBox->setText("<b><font color=\"yellow\">" + subsidy + "</font></b>");
     } else {
-    ui->rewardBox->setText("<b><font color=\"orange\">" + subsidy + "</font></b>");
+    ui->rewardBox->setText("<b><font color=\"teal\">" + subsidy + "</font></b>");
     }
-    
+
     if(pHardness > hardnessPrevious)
     {
-        ui->diffBox->setText("<b><font color=\"yellow\">" + hardness + "</font></b>");        
+        ui->diffBox->setText("<b><font color=\"yellow\">" + hardness + "</font></b>");
     } else if(pHardness < hardnessPrevious) {
         ui->diffBox->setText("<b><font color=\"red\">" + hardness + "</font></b>");
     } else {
-        ui->diffBox->setText("<b><font color=\"orange\">" + hardness + "</font></b>");        
+        ui->diffBox->setText("<b><font color=\"teal\">" + hardness + "</font></b>");
     }
-	
+
     if(marketcap > marketcapPrevious)
     {
         ui->marketcap->setText("<b><font color=\"yellow\">$" + QString::number(marketcap) + " USD</font></b>");
     } else if(marketcap < marketcapPrevious) {
         ui->marketcap->setText("<b><font color=\"red\">$" + QString::number(marketcap) + " USD</font></b>");
     } else {
-        ui->marketcap->setText("<b><font color=\"orange\">$"+QString::number(marketcap)+" USD</font></b>");
+        ui->marketcap->setText("<b><font color=\"teal\">$"+QString::number(marketcap)+" USD</font></b>");
     }
 
     if(pHardness2 > hardnessPrevious2)
@@ -151,43 +199,43 @@ void StatisticsPage::updateStatistics()
     } else if(pHardness2 < hardnessPrevious2) {
         ui->diffBox2->setText("<b><font color=\"red\">" + hardness2 + "</font></b>");
     } else {
-        ui->diffBox2->setText("<b><font color=\"orange\">" + hardness2 + "</font></b>");
+        ui->diffBox2->setText("<b><font color=\"teal\">" + hardness2 + "</font></b>");
     }
-    
+
     if(pPawrate2 > netPawratePrevious)
     {
         ui->pawrateBox->setText("<b><font color=\"yellow\">" + pawrate + " MH/s</font></b>");
     } else if(pPawrate2 < netPawratePrevious) {
         ui->pawrateBox->setText("<b><font color=\"red\">" + pawrate + " MH/s</font></b>");
     } else {
-        ui->pawrateBox->setText("<b><font color=\"orange\">" + pawrate + " MH/s</font></b>");
+        ui->pawrateBox->setText("<b><font color=\"teal\">" + pawrate + " MH/s</font></b>");
     }
 
     if(Qlpawrate != pawratePrevious)
     {
         ui->localBox->setText("<b><font color=\"yellow\">" + Qlpawrate + "</font></b>");
     } else {
-    ui->localBox->setText("<b><font color=\"orange\">" + Qlpawrate + "</font></b>");
+    ui->localBox->setText("<b><font color=\"teal\">" + Qlpawrate + "</font></b>");
     }
-    
+
     if(peers > connectionPrevious)
     {
-        ui->connectionBox->setText("<b><font color=\"yellow\">" + QPeers + "</font></b>");             
+        ui->connectionBox->setText("<b><font color=\"yellow\">" + QPeers + "</font></b>");
     } else if(peers < connectionPrevious) {
-        ui->connectionBox->setText("<b><font color=\"red\">" + QPeers + "</font></b>");        
+        ui->connectionBox->setText("<b><font color=\"red\">" + QPeers + "</font></b>");
     } else {
-        ui->connectionBox->setText("<b><font color=\"orange\">" + QPeers + "</font></b>");  
+        ui->connectionBox->setText("<b><font color=\"teal\">" + QPeers + "</font></b>");
     }
 
     if(volume > volumePrevious)
     {
-        ui->volumeBox->setText("<b><font color=\"yellow\">" + qVolume + " D" + "</font></b>");
+        ui->volumeBox->setText("<b><font color=\"yellow\">" + qVolume + " RUPEE" + "</font></b>");
     } else if(volume < volumePrevious) {
-        ui->volumeBox->setText("<b><font color=\"red\">" + qVolume + " D" + "</font></b>");
+        ui->volumeBox->setText("<b><font color=\"red\">" + qVolume + " RUPEE" + "</font></b>");
     } else {
-        ui->volumeBox->setText("<b><font color=\"orange\">" + qVolume + " D" + "</font></b>");
+        ui->volumeBox->setText("<b><font color=\"teal\">" + qVolume + " RUPEE" + "</font></b>");
     }
-	
+
     updatePrevious(nHeight, nMinWeight, nNetworkWeight, phase, subsidy, pHardness, pHardness2, pPawrate2, Qlpawrate, peers, volume, marketcap);
 }
 

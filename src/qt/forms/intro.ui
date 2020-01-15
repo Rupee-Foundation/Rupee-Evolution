@@ -45,7 +45,7 @@
        <item>
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>This is the first time &lt;strong&gt;RupeeEvolution&lt;/strong&gt; has launched on this computer, so you can choose where RupeeEvolution will store its data.</string>
+          <string>This is the first time &lt;strong&gt;Rupee Evolution&lt;/strong&gt; has launched on this computer, so you can choose where RupeeEvolution will store its data.</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>

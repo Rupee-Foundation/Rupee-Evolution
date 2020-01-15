@@ -19,7 +19,7 @@ public:
     {
         BTC,
         dBTC,
-	USD,
+	       USD,
         mBTC,
         uBTC
     };
