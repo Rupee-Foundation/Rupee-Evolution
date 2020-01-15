@@ -807,9 +807,6 @@ void BitcoinGUI::setNumConnections(int count)
         labelConnectTypeIcon->setPixmap(QIcon(":/icons/toroff").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
         labelConnectTypeIcon->setToolTip(tr("Not Connected via the Tor Network, Start Rupee Evolution with the flag nativetor=1"));
     }
-    if (fFSLock == true) {
-        labelFSLockIcon->setPixmap(QIcon(":/icons/fs").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
-    }
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
