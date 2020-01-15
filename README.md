@@ -3,27 +3,27 @@ Tribus Algo PoW/PoS Hybrid Cryptocurrency
 
 ![logo](http://i.imgur.com/gIe5vnw.png)
 
-[![GitHub version](https://img.shields.io/github/release/carsenk/rupeeevolution.svg)](https://badge.fury.io/gh/carsenk%2Frupeeevolution)
-[![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Rupee-Foundation/rupeeevolution/blob/master/COPYING)
-[![RupeeEvolution downloads](https://img.shields.io/github/downloads/carsenk/rupeeevolution/total.svg?maxAge=2592000)](https://github.com/Rupee-Foundation/rupeeevolution/releases)
+[![GitHub version](https://img.shields.io/github/release/Rupee-Foundation/Rupee-Evolution.svg)](https://badge.fury.io/gh/Rupee-Foundation%2FRupee-Evolution)
+[![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Rupee-Foundation/Rupee-Evolution/blob/master/COPYING)
+[![RupeeEvolution downloads](https://img.shields.io/github/downloads/Rupee-Foundation/Rupee-Evolution/total.svg?maxAge=2592000)](https://github.com/Rupee-Foundation/Rupee-Evolution/releases)
 [![Join the chat at https://discord.gg/AcThv2y](https://img.shields.io/badge/Discord-Chat-blue.svg?logo=discord)](https://discord.gg/AcThv2y)
 
-[![HitCount](http://hits.dwyl.io/carsenk/rupeeevolution.svg)](http://hits.dwyl.io/carsenk/rupeeevolution)
+[![HitCount](http://hits.dwyl.io/carsenk/rupeeevolution.svg)](http://hits.dwyl.io/Rupee-Foundation/Rupee-Evolution)
 <a href="https://discord.gg/UPpQy3n"><img src="https://discordapp.com/api/guilds/334361453320732673/embed.png" alt="Discord server" /></a>
 
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/carsenk/rupeeevolution.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/carsenk/rupeeevolution.svg)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Rupee-Foundation/Rupee-Evolution.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/Rupee-Foundation/Rupee-Evolution.svg)
 
 [![Snap Status](https://build.snapcraft.io/badge/Rupee-Foundation/Rupee-Evolution.svg)](https://build.snapcraft.io/user/Rupee-Foundation/Rupee-Evolution)
 
-[![Build Status](https://travis-ci.org/Rupee-Foundation/rupeeevolution.svg?branch=master)](https://travis-ci.org/carsenk/rupeeevolution)
+[![Build Status](https://travis-ci.org/Rupee-Foundation/Rupee-Evolution.svg?branch=master)](https://travis-ci.org/Rupee-Foundation/Rupee-Evolution)
 
-[![Build history](https://buildstats.info/travisci/chart/carsenk/rupeeevolution?branch=master)](https://travis-ci.org/Rupee-Foundation/rupeeevolution?branch=master)
+[![Build history](https://buildstats.info/travisci/chart/Rupee-Foundation/Rupee-Evolution?branch=master)](https://travis-ci.org/Rupee-Foundation/Rupee-Evolution?branch=master)
 
 Intro
 ==========================
 RupeeEvolution is a true optional anonymous, untraceable, and secure hybrid cryptocurrency.
 
-Ticker: INN
+Ticker: RUPEE
 
 RupeeEvolution [RUPEE] is an anonymous, untraceable, energy efficient, Proof-of-Work (New Tribus Algorithm) and Proof-of-Stake cryptocurrency.
 84,000,000 RUPEE will be created in approx. about 15 years during the PoW phase. RupeeEvolution had a % Premine of 22,000,000 RUPEE for SWAP, distribution, and marketing.
@@ -34,7 +34,7 @@ Specifications
 * Ideal block time: 15 seconds
 * Stake interest: 10% annual static inflation
 * Confirmations: 10 blocks
-* Maturity: 75 blocks
+* Maturity: 40 blocks
 * Min stake age: 24 hours
 * Cost of Hybrid Fortuna Stakes: 84,000 RUPEE
 * Hybrid Fortuna Stake Reward: 70% of the current block reward
