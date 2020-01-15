@@ -11,8 +11,8 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get --assume-yes install git unzip build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libevent-dev obfs4proxy
 
 echo "Installing RupeeEvolution Wallet"
-git clone https://github.com/Rupee-Foundation/rupeeevolution
-cd rupeeevolution || exit
+git clone https://github.com/Rupee-Foundation/Rupee-Evolution
+cd Rupee-Evolution || exit
 git checkout master
 git pull
 
@@ -34,11 +34,11 @@ echo -e "daemon=1\listen=1\rpcuser=user\rpcpassword=changethispassword\nativetor
 #unzip chaindata1701122.zip
 #rm -rf chaindata1701122.zip
 echo "Back to Compiled rupeeevolutiond Binary Folder"
-cd ~/rupeeevolution/src
+cd ~/Rupee-Evolution/src
                 ;;
 2) echo 2 "Update rupeeevolutiond"
-echo "Updating RupeeEvolution Wallet"
-cd ~/rupeeevolution || exit
+echo "Updating Rupee Evolution Wallet"
+cd ~/Rupee-Evolution || exit
 git checkout master
 git pull
 
@@ -50,7 +50,7 @@ sudo yes | cp -rf rupeeevolutiond /usr/bin/
 echo "Copied to /usr/bin for ease of use"
 
 echo "Back to Compiled rupeeevolutiond Binary Folder"
-cd ~/rupeeevolution/src
+cd ~/Rupee-Evolution/src
                 ;;
 3) echo 3 "Compile rupeeevolutiond Ubuntu 18.04"
 echo "Updating linux packages"
@@ -71,8 +71,8 @@ cd ~
 openssl version -v
 
 echo "Installing RupeeEvolution Wallet"
-git clone https://github.com/Rupee-Foundation/rupeeevolution
-cd rupeeevolution
+git clone https://github.com/Rupee-Foundation/Rupee-Evolution
+cd Rupee-Evolution
 git checkout master
 git pull
 
@@ -94,11 +94,11 @@ echo -e "daemon=1\listen=1\rpcuser=user\rpcpassword=changethispassword\nativetor
 #unzip chaindata1701122.zip
 #rm -rf chaindata1701122.zip
 echo "Back to Compiled rupeeevolutiond Binary Folder"
-cd ~/rupeeevolution/src
+cd ~/Rupee-Evolution/src
                 ;;
 4) echo 4 "Update rupeeevolutiond 18.04"
 echo "Updating RupeeEvolution Wallet"
-cd ~/rupeeevolution || exit
+cd ~/Rupee-Evolution || exit
 git checkout master
 git pull
 
@@ -110,7 +110,7 @@ sudo yes | cp -rf rupeeevolutiond /usr/bin/
 echo "Copied to /usr/bin for ease of use"
 
 echo "Back to Compiled rupeeevolutiond Binary Folder"
-cd ~/rupeeevolution/src
+cd ~/Rupee-Evolution/src
                 ;;
 esac
 echo Selected $choice
