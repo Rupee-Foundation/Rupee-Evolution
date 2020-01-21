@@ -21,7 +21,7 @@
 #include <boost/filesystem/fstream.hpp>
 
 using namespace std;
-using namespace boost;
+using namespace boos
 
 //
 // Global state
@@ -44,10 +44,10 @@ CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 
 // Block Variables
 
-unsigned int nTargetSpacing     = 15;               // ~15 seconds
+unsigned int nTargetSpacing     = 15;                // ~15 seconds
 unsigned int nStakeMinAge       = 24 * 60 * 60;      // 24 hour min stake age
-unsigned int nStakeMaxAge       = -1;               // unlimited
-unsigned int nModifierInterval  = 10 * 60;          // time to elapse before new modifier is computed
+unsigned int nStakeMaxAge       = -1;                // unlimited
+unsigned int nModifierInterval  = 10 * 60;           // time to elapse before new modifier is computed
 int64_t nLastCoinStakeSearchTime = GetAdjustedTime();
 int nCoinbaseMaturity = 30; //40 on Mainnet R u p e e E v o l u t i o n
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -1538,8 +1538,8 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 	int64_t nSubsidy = 1 * COIN;
 
 	if (pindexBest->nHeight == 1)
-		nSubsidy = 1000000 * COIN;  // 10% Premine
-	else if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK) // Block 210, Instamine prevention
+		nSubsidy = 22000000 * COIN;  // 26.19% Premine - 21.3 million for SWAP Phases, 700k for Development Fund
+	else if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK) // Block 40000, Instamine prevention
         nSubsidy = 0.002 * COIN/2;
 	else if (pindexBest->nHeight <= 600000) //
 		nSubsidy = 0.1 * COIN;
@@ -1571,7 +1571,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
   	nSubsidy = 0.01 * COIN;
   else if (pindexBest->nHeight <= 31600000) //
   	nSubsidy = 0.01 * COIN;
-  else if (pindexBest->nHeight > LAST_POW_BLOCK) //
+  else if (pindexBest->nHeight > LAST_POW_BLOCK) // PoW Phase Ends, PoS consensus kicks in
 		nSubsidy = 0; // PoW Ends
 
     if (fDebug && GetBoolArg("-printcreation"))
