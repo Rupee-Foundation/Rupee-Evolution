@@ -24,10 +24,10 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter an RupeeEvolution address (e.g. DyvGBZBowrppUwwNUo1GCRDTibzJi7g2M)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter an RupeeEvolution address (e.g. RFm1iqDnhvKaQRKAY1WYJqJ9qajymHpYbg)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter an RupeeEvolution address (e.g. DyvGBZBowrppUwwNUo1GCRDTibzJi7g2M)"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter an RupeeEvolution address (e.g. RFm1iqDnhvKaQRKAY1WYJqJ9qajymHpYbg)"));
     ui->signatureIn_VM->setPlaceholderText(tr("Enter RupeeEvolution signature"));
 #endif
 
