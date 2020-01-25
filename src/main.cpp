@@ -21,7 +21,7 @@
 #include <boost/filesystem/fstream.hpp>
 
 using namespace std;
-using namespace boos
+using namespace boost;
 
 //
 // Global state
