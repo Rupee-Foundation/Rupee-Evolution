@@ -1224,10 +1224,16 @@ void WriteConfigFile(FILE* configFile)
     fputs ("fortunastake=0\n", configFile); //default
     fputs ("fortunastakeaddr=\n", configFile);
     fputs ("fortunastakeprivkey=\n", configFile);
-    fputs ("addnode=\n", configFile);
-    fputs ("addnode=\n", configFile);
-    fputs ("addnode=\n", configFile);
-    fputs ("addnode=\n", configFile);
+    fputs ("addnode=45.32.217.178\n", configFile);
+    fputs ("addnode=45.77.126.234\n", configFile);
+    fputs ("addnode=199.247.29.228\n", configFile);
+    fputs ("addnode=45.77.245.126\n", configFile);
+    fputs ("addnode=95.179.229.158\n", configFile);
+    fputs ("addnode=167.179.104.179\n", configFile);
+    fputs ("addnode=207.148.81.25\n", configFile);
+    fputs ("addnode=199.247.0.87\n", configFile);
+    fputs ("addnode=140.82.55.118\n", configFile);
+    fputs ("addnode=149.248.55.243\n", configFile);
     fclose(configFile);
     ReadConfigFile(mapArgs, mapMultiArgs);
 }
