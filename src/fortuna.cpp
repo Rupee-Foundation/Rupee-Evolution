@@ -46,8 +46,8 @@ int MIN_MN_PROTO_VERSION = 31000;
     Copyright 2014, Darkcoin Developers
         eduffield - evan@darkcoin.io
     Copyright 2018, RupeeEvolution Developers
-        carsenk - admin@rupeeevolution.io
-        enkayz - enkayz@rupeeevolution.io
+        carsenk - admin@denarius.io
+        enkayz - enkayz@denarius.io
 */
 
 int randomizeList (int i) { return std::rand()%i;}
@@ -799,13 +799,13 @@ int CForTunaPool::GetDenominationsByAmount(int64_t nAmount, int nDenomTarget){
 bool CForTunaSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey){
 	bool fIsInitialDownload = IsInitialBlockDownload();
     if(fIsInitialDownload) return;
-	
+
     CScript payee2;
     payee2= GetScriptForDestination(pubkey.GetID());
 
     CTransaction txVin;
     uint256 hash;
-	
+
     if(GetTransaction(vin.prevout.hash, txVin, hash)){
         CTxOut out = txVin.vout[vin.prevout.n];
 		if ((out.nValue == GetMNCollateral()*COIN) && (out.scriptPubKey == payee2))

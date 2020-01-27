@@ -26,7 +26,7 @@ RupeeEvolution is a true optional anonymous, untraceable, and secure hybrid cryp
 Ticker: RUPEE
 
 RupeeEvolution [RUPEE] is an anonymous, untraceable, energy efficient, Proof-of-Work (New Tribus Algorithm) and Proof-of-Stake cryptocurrency.
-84,000,000 RUPEE will be created in approx. about 15 years during the PoW phase. RupeeEvolution had a % Premine of 22,000,000 RUPEE for SWAP, distribution, and marketing.
+84,000,000 RUPEE will be created in approx. about 15 years during the PoW phase. RupeeEvolution had a 26.19% Premine of 22,000,000 RUPEE for SWAP, distribution, and marketing.
 
 Specifications
 ==========================
@@ -36,7 +36,7 @@ Specifications
 * Confirmations: 10 blocks
 * Maturity: 40 blocks
 * Min stake age: 24 hours
-* Cost of Hybrid Fortuna Stakes: 84,000 RUPEE
+* Cost of Hybrid Fortuna Stakes: 8,400 RUPEE
 * Hybrid Fortuna Stake Reward: 70% of the current block reward
 * P2P Port: 64630, Testnet Port: 64631
 * RPC Port: 64634, Testnet RPC Port: 64635

@@ -1841,7 +1841,7 @@ void CWallet::AvailableCoinsForStaking(vector<COutput>& vCoins, unsigned int nSp
                 if (pcoin->nVersion == ANON_TXN_VERSION
                     && pcoin->vout[i].IsAnonOutput())
                     continue;
-					
+
 				isminetype mine = IsMine(pcoin->vout[i]);
 				if (mine == ISMINE_NO)
 					continue;
@@ -1851,11 +1851,11 @@ void CWallet::AvailableCoinsForStaking(vector<COutput>& vCoins, unsigned int nSp
 
 				if (mine == ISMINE_WATCH_ONLY && nWatchonlyConfig == 1)
 					continue;
-				
+
 				bool fIsSpendable = false;
                 if ((mine & ISMINE_SPENDABLE) != ISMINE_NO)
                     fIsSpendable = true;
-				
+
                 if (!(pcoin->IsSpent(i)) && IsMine(pcoin->vout[i]) && pcoin->vout[i].nValue >= nMinimumInputValue
                         && !IsLockedCoin((*it).first, i) // ignore outputs that are locked for MNs
                         )
@@ -2946,7 +2946,7 @@ bool CWallet::UnlockStealthAddresses(const CKeyingMaterial& vMasterKeyIn)
 
         //CKey ckey;
         //ckey.Set(&sSpendR.e[0], true);
-		
+
 		CKey ckey;
 		CSecret vchSecret;
 		vchSecret.resize(ec_secret_size);
@@ -4641,7 +4641,7 @@ void CWallet::FixSpentCoins(int& nMismatchFound, int64_t& nBalanceInQuestion, bo
         {
             if (IsMine(pcoin->vout[n]) && pcoin->IsSpent(n) && (txindex.vSpent.size() <= n || txindex.vSpent[n].IsNull()))
             {
-                printf("FixSpentCoins found lost coin %s D %s[%d], %s\n",
+                printf("FixSpentCoins found lost coin %s RUPEE %s[%d], %s\n",
                     FormatMoney(pcoin->vout[n].nValue).c_str(), pcoin->GetHash().ToString().c_str(), n, fCheckOnly? "repair not attempted" : "repairing");
                 nMismatchFound++;
                 nBalanceInQuestion += pcoin->vout[n].nValue;
@@ -4653,7 +4653,7 @@ void CWallet::FixSpentCoins(int& nMismatchFound, int64_t& nBalanceInQuestion, bo
             }
             else if (IsMine(pcoin->vout[n]) && !pcoin->IsSpent(n) && (txindex.vSpent.size() > n && !txindex.vSpent[n].IsNull()))
             {
-                printf("FixSpentCoins found spent coin %s D %s[%d], %s\n",
+                printf("FixSpentCoins found spent coin %s RUPEE %s[%d], %s\n",
                     FormatMoney(pcoin->vout[n].nValue).c_str(), pcoin->GetHash().ToString().c_str(), n, fCheckOnly? "repair not attempted" : "repairing");
                 nMismatchFound++;
                 nBalanceInQuestion += pcoin->vout[n].nValue;
@@ -6944,7 +6944,7 @@ bool CWallet::SendDToAnon(CStealthAddress& sxAddress, int64_t nValue, std::strin
     std::vector<std::pair<CScript, int64_t> > vecSend;
     CReserveKey reservekey(this);
 	std::map<CKeyID, CStealthAddress> mapPubStealth;
-	
+
 
     if (!CreateAnonOutputs(&sxAddress, nValue, sNarr, vecSend, scriptNarration, &mapPubStealth))
     {
@@ -6959,7 +6959,7 @@ bool CWallet::SendDToAnon(CStealthAddress& sxAddress, int64_t nValue, std::strin
     //std::random_device rng;
     //std::mt19937 urng(rng());
     //std::shuffle(vecSend.begin(), vecSend.end(), urng);
-	
+
 
     int64_t nFeeRequired;
     if (!CreateTransaction(scriptNarration, nValue, sNarr, wtxNew, reservekey, nFeeRequired))
@@ -7048,7 +7048,7 @@ bool CWallet::SendAnonToAnon(CStealthAddress& sxAddress, int64_t nValue, int nRi
 
     if (nValue + nTransactionFee > GetAnonBalance())
     {
-        sError = "Insufficient Anonymous D funds";
+        sError = "Insufficient Anonymous RUPEE funds";
         return false;
     };
 
@@ -7144,7 +7144,7 @@ bool CWallet::SendAnonToD(CStealthAddress& sxAddress, int64_t nValue, int nRingS
 
     if (nValue + nTransactionFee > GetAnonBalance())
     {
-        sError = "Insufficient Anonymous D Funds";
+        sError = "Insufficient Anonymous RUPEE Funds";
         return false;
     };
 
@@ -7250,7 +7250,7 @@ bool CWallet::EstimateAnonFee(int64_t nValue, int nRingSize, std::string& sNarr,
 
     if (nValue + nTransactionFee > GetAnonBalance())
     {
-        sError = "Insufficient Anonymous D funds";
+        sError = "Insufficient Anonymous RUPEE funds";
         return false;
     };
 
@@ -7370,7 +7370,7 @@ bool CWallet::ExpandLockedAnonOutput(CWalletDB *pwdb, CKeyID &ckeyId, CLockedAno
 	CKey key;
 	CSecret vchSecret;
 	vchSecret.resize(ec_secret_size);
-	
+
 	key.Set(&vchSecret[0], &sSpendR.e[0], true);
     if (!key.IsValid())
         return error("%s: Reconstructed key is invalid.", __func__);

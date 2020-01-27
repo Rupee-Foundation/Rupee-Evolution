@@ -19,7 +19,7 @@ Build-Depends: debhelper,
  libqt4-dev,
  libqrencode-dev
 Standards-Version: 1.0.7.0
-Homepage: http://www.rupeeevolution.io
+Homepage: https://rupevolution.org/
 Vcs-Git: git://github.com/carsenk/rupeeevolution.git
 Vcs-Browser: http://github.com/carsenk/rupeeevolution
 

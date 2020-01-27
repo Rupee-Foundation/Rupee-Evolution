@@ -26,7 +26,7 @@ ProofOfImage::ProofOfImage(QWidget *parent) :
 {
     ui->setupUi(this);
     fileName = "";
-    
+
 }
 
 ProofOfImage::~ProofOfImage()
@@ -47,7 +47,7 @@ void ProofOfImage::on_createPushButton_clicked()
 {
     if(fileName == "")
     {
-  noImageSelected();   
+  noImageSelected();
   return;
     }
 
@@ -65,14 +65,14 @@ std::vector<char> imageContents((std::istreambuf_iterator<char>(imageFile)),
 
     ui->lineEdit->setText(QString::fromStdString(addr));
 
-    CAmount nAmount = 0.001 * COIN; // 0.001 D Fee
-    
+    CAmount nAmount = 0.001 * COIN; // 0.001 RUPEE Fee
+
     // Wallet comments
     CWalletTx wtx;
     wtx.mapValue["comment"] = fileName.toStdString();
 	std::string sNarr = ui->edit->text().toStdString();
     wtx.mapValue["to"]      = "Proof of Data";
-    
+
     if (pwalletMain->IsLocked())
     {
 	  QMessageBox unlockbox;
@@ -83,9 +83,9 @@ std::vector<char> imageContents((std::istreambuf_iterator<char>(imageFile)),
     else if(pwalletMain->GetBalance() < 0.001)
     {
 	  QMessageBox error2box;
-	  error2box.setText("Error, You need at least 0.001 D to send proof of data!");
+	  error2box.setText("Error, You need at least 0.001 RUPEE to send proof of data!");
 	  error2box.exec();
-      ui->txLineEdit->setText("ERROR: You need at least a 0.001 D balance to send proof of data.");
+      ui->txLineEdit->setText("ERROR: You need at least a 0.001 RUPEE balance to send proof of data.");
     }
     else
     {
@@ -103,7 +103,7 @@ std::vector<char> imageContents((std::istreambuf_iterator<char>(imageFile)),
 		successbox.exec();
         ui->txLineEdit->setText(QString::fromStdString(wtx.GetHash().GetHex()));
      }
-    
+
 
 }
 
@@ -111,7 +111,7 @@ void ProofOfImage::on_checkButton_clicked()
 {
     if(fileName == "")
     {
-  noImageSelected();   
+  noImageSelected();
   return;
     }
 
