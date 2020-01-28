@@ -54,7 +54,7 @@ FortunastakeManager::FortunastakeManager(QWidget *parent) :
     ui->tableWidget_2->sortByColumn(0, Qt::AscendingOrder);
 
     subscribeToCoreSignals();
-	
+
 	timer = new QTimer(this);
     //connect(timer, SIGNAL(timeout()), this, SLOT(updateNodeList(pindexBest)));
     //if(!GetBoolArg("-reindexaddr", false))
@@ -65,7 +65,7 @@ FortunastakeManager::FortunastakeManager(QWidget *parent) :
     QTimer::singleShot(10000, this, SLOT(updateNodeList()));
     QTimer::singleShot(30000, this, SLOT(updateNodeList())); // try to load the node list ASAP for the user
 	QTimer::singleShot(60000, this, SLOT(updateNodeList()));
-	
+
 	/*
 	timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updateNodeList()));
@@ -93,7 +93,7 @@ static void NotifyAdrenalineNodeUpdated(FortunastakeManager *page, CAdrenalineNo
     QString alias = QString::fromStdString(nodeConfig.sAlias);
     QString addr = QString::fromStdString(nodeConfig.sAddress);
     QString privkey = QString::fromStdString(nodeConfig.sFortunastakePrivKey);
-    
+
     QMetaObject::invokeMethod(page, "updateAdrenalineNode", Qt::QueuedConnection,
                               Q_ARG(QString, alias),
                               Q_ARG(QString, addr),
@@ -300,7 +300,7 @@ void FortunastakeManager::updateNodeList()
         int mnRank = mn.nRank;
         int64_t value = mn.payValue;
         //mn.GetPaymentInfo(pindexBest, value, rate);
-        QString payrate = QString::fromStdString(strprintf("%sD", FormatMoney(value).c_str()));
+        QString payrate = QString::fromStdString(strprintf("%sRUPEE", FormatMoney(value).c_str()));
         // populate list
         // Address, Rank, Active, Active Seconds, Last Seen, Pub Key
         QTableWidgetItem *activeItem = new QTableWidgetItem();
@@ -367,7 +367,7 @@ void FortunastakeManager::updateNodeList()
 				}
                 npayrate = QString::fromStdString("");
                 if (value > 0) {
-                    npayrate = QString::fromStdString(strprintf("%sD", FormatMoney(value).c_str()));
+                    npayrate = QString::fromStdString(strprintf("%sRUPEE", FormatMoney(value).c_str()));
                 }
                 ncollateral = QString::fromStdString(address2.ToString().c_str());
                 found = true;
@@ -666,7 +666,7 @@ void FortunastakeManager::on_stopAllButton_clicked()
 	if(result)
 	{
    	    results += c.sAddress + ": STOPPED\n";
-	}	
+	}
 	else
 	{
 	    results += c.sAddress + ": ERROR: " + errorMessage + "\n";
