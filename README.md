@@ -1,7 +1,7 @@
 # RupeeEvolution [RUPEE]
 Tribus Algo PoW/PoS Hybrid Cryptocurrency
 
-![logo](http://i.imgur.com/gIe5vnw.png)
+![logo](https://github.com/Rupee-Foundation/Rupee-Evolution/blob/master/src/qt/res/icons/rupeeevolution-256.png?raw=true)
 
 [![GitHub version](https://img.shields.io/github/release/Rupee-Foundation/Rupee-Evolution.svg)](https://badge.fury.io/gh/Rupee-Foundation%2FRupee-Evolution)
 [![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Rupee-Foundation/Rupee-Evolution/blob/master/COPYING)
