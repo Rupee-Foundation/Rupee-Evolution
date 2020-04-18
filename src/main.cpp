@@ -1542,7 +1542,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 	else if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK) // Block 40000, Instamine prevention
         nSubsidy = 0.002 * COIN/2;
 	else if (pindexBest->nHeight <= 40000) //
-		nSubsidy = 0.1 * COIN;
+		nSubsidy = 0.01 * COIN;
 	else if (pindexBest->nHeight <= 125000) //
 		nSubsidy = 0.4 * COIN;
 	else if (pindexBest->nHeight <= 250000) //
