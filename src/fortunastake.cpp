@@ -745,7 +745,7 @@ int CFortunaStake::SetPayRate(int nHeight)
              payCount = matches;
              payValue = amount;
              // set the node's current 'reward rate' - pay value divided by rounds (3)
-             // this rate is representative of "D per day"
+             // this rate is representative of "RUPEE per day"
              payRate = ((payValue / scanBack) / 30) * 86400;
              // printf("%d found with %s value %.2f rate\n", matches, FormatMoney(amount).c_str(), payRate);
              return matches;

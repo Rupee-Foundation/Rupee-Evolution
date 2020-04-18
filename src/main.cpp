@@ -44,7 +44,7 @@ CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 
 // Block Variables
 
-unsigned int nTargetSpacing     = 15;                // ~15 seconds
+unsigned int nTargetSpacing     = 60;                // ~60 seconds
 unsigned int nStakeMinAge       = 24 * 60 * 60;      // 24 hour min stake age
 unsigned int nStakeMaxAge       = -1;                // unlimited
 unsigned int nModifierInterval  = 10 * 60;           // time to elapse before new modifier is computed
@@ -1535,41 +1535,41 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 // Proof of Work miner's coin base reward
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 {
-	int64_t nSubsidy = 1 * COIN;
+	int64_t nSubsidy = 0.01 * COIN;
 
 	if (pindexBest->nHeight == 1)
 		nSubsidy = 22000000 * COIN;  // 26.19% Premine - 21.3 million for SWAP Phases, 700k for Development Fund
 	else if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK) // Block 40000, Instamine prevention
         nSubsidy = 0.002 * COIN/2;
-	else if (pindexBest->nHeight <= 600000) //
+	else if (pindexBest->nHeight <= 40000) //
 		nSubsidy = 0.1 * COIN;
-	else if (pindexBest->nHeight <= 1200000) //
-		nSubsidy = 0.2 * COIN;
-	else if (pindexBest->nHeight <= 1800000) //
+	else if (pindexBest->nHeight <= 125000) //
 		nSubsidy = 0.4 * COIN;
-  else if (pindexBest->nHeight <= 2200000) //
-  	nSubsidy = 0.5 * COIN;
-	else if (pindexBest->nHeight <= 4300000) //
-  	nSubsidy = 0.42 * COIN;
-	else if (pindexBest->nHeight <= 6400000) //
-  	nSubsidy = 0.35 * COIN;
-  else if (pindexBest->nHeight <= 8500000) //
-		nSubsidy = 0.29 * COIN;
-	else if (pindexBest->nHeight <= 10600000) //
-  	nSubsidy = 0.24 * COIN;
-  else if (pindexBest->nHeight <= 12700000) //
-  	nSubsidy = 0.2 * COIN;
-  else if (pindexBest->nHeight <= 14800000) //
-  	nSubsidy = 0.17 * COIN;
-  else if (pindexBest->nHeight <= 16900000) //
-  	nSubsidy = 0.15 * COIN;
-  else if (pindexBest->nHeight <= 19000000) //
-  	nSubsidy = 0.14 * COIN;
-  else if (pindexBest->nHeight <= 21100000) //
-  	nSubsidy = 0.07 * COIN;
-  else if (pindexBest->nHeight <= 23200000) //
-  	nSubsidy = 0.01 * COIN;
-  else if (pindexBest->nHeight <= 31600000) //
+	else if (pindexBest->nHeight <= 250000) //
+		nSubsidy = 0.8 * COIN;
+  else if (pindexBest->nHeight <= 375000) //
+  	nSubsidy = 1.6 * COIN;
+	else if (pindexBest->nHeight <= 500000) //
+  	nSubsidy = 2 * COIN;
+	else if (pindexBest->nHeight <= 1000000) //
+  	nSubsidy = 1.68 * COIN;
+  else if (pindexBest->nHeight <= 1500000) //
+		nSubsidy = 1.4 * COIN;
+	else if (pindexBest->nHeight <= 2000000) //
+  	nSubsidy = 1.16 * COIN;
+  else if (pindexBest->nHeight <= 2500000) //
+  	nSubsidy = 0.96 * COIN;
+  else if (pindexBest->nHeight <= 3000000) //
+  	nSubsidy = 0.8 * COIN;
+  else if (pindexBest->nHeight <= 3500000) //
+  	nSubsidy = 0.68 * COIN;
+  else if (pindexBest->nHeight <= 4000000) //
+  	nSubsidy = 0.6 * COIN;
+  else if (pindexBest->nHeight <= 4500000) //
+  	nSubsidy = 0.56 * COIN;
+  else if (pindexBest->nHeight <= 5000000) //
+  	nSubsidy = 0.28 * COIN;
+  else if (pindexBest->nHeight <= 5500000) //
   	nSubsidy = 0.01 * COIN;
   else if (pindexBest->nHeight > LAST_POW_BLOCK) // PoW Phase Ends, PoS consensus kicks in
 		nSubsidy = 0; // PoW Ends
@@ -1580,16 +1580,16 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
     return nSubsidy + nFees;
 }
 
-const int YEARLY_BLOCKCOUNT = 2103792; // Amount of Blocks per year
+const int YEARLY_BLOCKCOUNT = 525600; // Amount of Blocks per year
 
 // Proof of Stake miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 {
-	if (pindexBest->nHeight > (YEARLY_BLOCKCOUNT*9000)) // Over 9000 years.
+	if (pindexBest->nHeight > (YEARLY_BLOCKCOUNT*9000)) // It's Over 9000!!!!!!! years.....
         return nFees;
 
     int64_t nRewardCoinYear;
-    nRewardCoinYear = COIN_YEAR_REWARD; // 0.1 10%
+    nRewardCoinYear = COIN_YEAR_REWARD; // 0.1 | 10%
 
     int64_t nSubsidy;
     nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN;
@@ -1604,7 +1604,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
     return nSubsidy + nFees;
 }
 
-static const int64_t nTargetTimespan = 30;
+static const int64_t nTargetTimespan = 120;
 
 //
 // maximum nBits value could possible be required nTime after
