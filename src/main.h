@@ -58,7 +58,7 @@ class CNode;
 
 // General RupeeEvolution Block Values
 
-static const int LAST_POW_BLOCK = 31600000; // 31.6 million blocks Approx. 15 years of Proof of Work before Proof of Stake consensus kicks in
+static const int LAST_POW_BLOCK = 8400000; // 8.4 million blocks Approx. ~16 years of Proof of Work before Proof of Stake consensus kicks in
 static const int FAIR_LAUNCH_BLOCK = 40000; // Last Block until full block reward starts
 static const unsigned int MAX_BLOCK_SIZE = 1500000; // 1.5MB block hard limit
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2; // 512kb block soft limit, ditto

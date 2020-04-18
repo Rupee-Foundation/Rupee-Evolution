@@ -49,7 +49,7 @@ unsigned int nStakeMinAge       = 24 * 60 * 60;      // 24 hour min stake age
 unsigned int nStakeMaxAge       = -1;                // unlimited
 unsigned int nModifierInterval  = 10 * 60;           // time to elapse before new modifier is computed
 int64_t nLastCoinStakeSearchTime = GetAdjustedTime();
-int nCoinbaseMaturity = 30; //40 on Mainnet R u p e e E v o l u t i o n
+int nCoinbaseMaturity = 50; //60 on Mainnet R u p e e E v o l u t i o n
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 bool FortunaReorgBlock = true;
@@ -1569,7 +1569,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
   	nSubsidy = 0.56 * COIN;
   else if (pindexBest->nHeight <= 5000000) //
   	nSubsidy = 0.28 * COIN;
-  else if (pindexBest->nHeight <= 5500000) //
+  else if (pindexBest->nHeight <= 8400000) //
   	nSubsidy = 0.01 * COIN;
   else if (pindexBest->nHeight > LAST_POW_BLOCK) // PoW Phase Ends, PoS consensus kicks in
 		nSubsidy = 0; // PoW Ends
