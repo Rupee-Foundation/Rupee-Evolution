@@ -64,67 +64,67 @@ void StatisticsPage::updateStatistics()
     }
 
     QString subsidy = "";
-	if (pindexBest->nHeight < 600000)
+	if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK)
     {
-        subsidy = "0.1 RUPEE per block";
+        subsidy = "0.01 RUPEE per block";
     }
-	else if (pindexBest->nHeight < 1200000)
-    {
-        subsidy = "0.2 RUPEE per block";
-    }
-	else if (pindexBest->nHeight < 1800000)
+	else if (pindexBest->nHeight < 125000)
     {
         subsidy = "0.4 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 2200000)
+	else if (pindexBest->nHeight < 250000)
     {
-        subsidy = "0.5 RUPEE per block";
+        subsidy = "0.8 RUPEE per block";
     }
-	else if (pindexBest->nHeight < 4300000)
+  else if (pindexBest->nHeight < 375000)
     {
-        subsidy = "0.42 RUPEE per block";
+        subsidy = "1.6 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 6400000)
+	else if (pindexBest->nHeight < 500000)
     {
-        subsidy = "0.35 RUPEE per block";
+        subsidy = "2 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 8500000)
+  else if (pindexBest->nHeight < 1000000)
     {
-        subsidy = "0.29 RUPEE per block";
+        subsidy = "1.68 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 10600000)
+  else if (pindexBest->nHeight < 1500000)
     {
-        subsidy = "0.24 RUPEE per block";
+        subsidy = "1.4 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 12700000)
+  else if (pindexBest->nHeight < 2000000)
     {
-        subsidy = "0.2 RUPEE per block";
+        subsidy = "1.16 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 14800000)
+  else if (pindexBest->nHeight < 2500000)
     {
-        subsidy = "0.17 RUPEE per block";
+        subsidy = "0.96 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 16900000)
+  else if (pindexBest->nHeight < 3000000)
     {
-        subsidy = "0.15 RUPEE per block";
+        subsidy = "0.8 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 19000000)
+  else if (pindexBest->nHeight < 3500000)
     {
-        subsidy = "0.14 RUPEE per block";
+        subsidy = "0.68 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 21100000)
+  else if (pindexBest->nHeight < 4000000)
     {
-        subsidy = "0.07 RUPEE per block";
+        subsidy = "0.6 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 23200000)
+  else if (pindexBest->nHeight < 4500000)
+    {
+        subsidy = "0.56 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 5000000)
+    {
+        subsidy = "0.28 RUPEE per block";
+    }
+  else if (pindexBest->nHeight < 8400000)
     {
         subsidy = "0.01 RUPEE per block";
     }
-  else if (pindexBest->nHeight < 31600000)
-    {
-        subsidy = "0.01 RUPEE per block";
-    }
-    else if (pindexBest->nHeight > 31600000)
+    else if (pindexBest->nHeight > 8400000)
     {
         subsidy = "No PoW Reward";
     }
@@ -252,7 +252,7 @@ void StatisticsPage::updatePrevious(int nHeight, int nMinWeight, int nNetworkWei
     pawratePrevious = Qlpawrate;
     connectionPrevious = peers;
     volumePrevious = volume;
-	marketcapPrevious = marketcap;
+	  marketcapPrevious = marketcap;
 }
 
 void StatisticsPage::setModel(ClientModel *model)

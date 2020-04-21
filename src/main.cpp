@@ -1540,9 +1540,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 	if (pindexBest->nHeight == 1)
 		nSubsidy = 22000000 * COIN;  // 26.19% Premine - 21.3 million for SWAP Phases, 700k for Development Fund
 	else if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK) // Block 40000, Instamine prevention
-        nSubsidy = 0.002 * COIN/2;
-	else if (pindexBest->nHeight <= 40000) //
-		nSubsidy = 0.01 * COIN;
+        nSubsidy = 0.02 * COIN/2;
 	else if (pindexBest->nHeight <= 125000) //
 		nSubsidy = 0.4 * COIN;
 	else if (pindexBest->nHeight <= 250000) //
