@@ -19,7 +19,7 @@
 class CValidationState;
 
 #define BLOCK_START_FORTUNASTAKE_PAYMENTS_TESTNET 550 // Testnet Fortunastake payments enabled block 550
-#define BLOCK_START_FORTUNASTAKE_PAYMENTS 800 //Mainnet Fortunastake payments not enabled until block 800
+#define BLOCK_START_FORTUNASTAKE_PAYMENTS 500 //Mainnet Fortunastake payments not enabled until block 500
 #define BLOCK_START_FORTUNASTAKE_DELAYPAY 2500 //Activates a delay in payment for MNs -R U P E E E V O L U T I O N Block 2500
 
 //#define START_FORTUNASTAKE_PAYMENTS_TESTNET 1519430400  //Sat, 24 Feb 2018 00:00:00 GMT
@@ -75,7 +75,7 @@ static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t MAX_MONEY = 84000000 * COIN; // 84,000,000 RUPEE Max
 static const int64_t COIN_YEAR_REWARD = 0.1 * COIN; // 10% per year
 
-static const int64_t MAINNET_POSFIX = 500; //Mainnet Proof of Stake update not enabled until block 500
+static const int64_t MAINNET_POSFIX = 250; //Mainnet Proof of Stake update not enabled until block 250
 static const int MN_ENFORCEMENT_ACTIVE_HEIGHT = 4500; // Enforce fortunastake payments after this height - BLOCK 4500
 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
