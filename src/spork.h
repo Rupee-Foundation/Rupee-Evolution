@@ -19,15 +19,15 @@ using namespace std;
 using namespace boost;
 
 // Don't ever reuse these IDs for other sporks
-#define SPORK_1_FORTUNASTAKE_PAYMENTS_ENFORCEMENT               10000
+#define SPORK_1_FORTUNASTAKE_PAYMENTS_ENFORCEMENT             10000
 #define SPORK_2_MAX_VALUE                                     10002
 #define SPORK_3_REPLAY_BLOCKS                                 10003
 
 
 #define SPORK_1_FORTUNASTAKE_PAYMENTS_ENFORCEMENT_DEFAULT       1515900783  //2018-1-14 03:33:03 GMT
-#define SPORK_2_MAX_VALUE_DEFAULT                             8400        //8400 RUPEE
-#define SPORK_3_REPLAY_BLOCKS_DEFAULT                         0
-#define SPORK_4_RECONVERGE_DEFAULT                            1420070400  //2047-1-1
+#define SPORK_2_MAX_VALUE_DEFAULT                               8400        //8400 RUPEE
+#define SPORK_3_REPLAY_BLOCKS_DEFAULT                           0
+#define SPORK_4_RECONVERGE_DEFAULT                              1420070400  //2047-1-1
 
 class CSporkMessage;
 class CSporkManager;
@@ -95,8 +95,8 @@ private:
 public:
 
     CSporkManager() {
-        strMainPubKey = "0417d4b095e451d08bd83111d9ddc7f648af93d8f72e4391940bfa97bde644c0504e1f04a9e7e89be7e1c54c8995f8905be76f50d43fb4a31a7abba5e5291fbc63";
-        strTestPubKey = "0417d4b095e451d08bd83111d9ddc7f648af93d8f72e4391940bfa97bde644c0504e1f04a9e7e89be7e1c54c8995f8905be76f50d43fb4a31a7abba5e5291fbc63";
+        strMainPubKey = "046c7f8acb62282a6b953a7f553b40f8c828c2ceb178f348994fbb180a24ca065fd93f2b45122d23bf140f2ed83e11d3f86950449412d4fdb1e044f21da2348403";
+        strTestPubKey = "046c7f8acb62282a6b953a7f553b40f8c828c2ceb178f348994fbb180a24ca065fd93f2b45122d23bf140f2ed83e11d3f86950449412d4fdb1e044f21da2348403";
     }
 
     std::string GetSporkNameByID(int id);

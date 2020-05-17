@@ -51,8 +51,8 @@ const CBlockIndex* getBlockIndex(int height)
 
 std::string getBlockHash(int Height)
 {
-    if(Height > pindexBest->nHeight) { return "00000d5dbbda01621cfc16bbc1f9bf3264d641a5dbf0de89fd0182c2c4828fcd"; }
-    if(Height < 0) { return "00000d5dbbda01621cfc16bbc1f9bf3264d641a5dbf0de89fd0182c2c4828fcd"; }
+    if(Height > pindexBest->nHeight) { return "00000d95779742dfa06ba61b0b567b9942da774a4354bc86625cd001fb573cd1"; }
+    if(Height < 0) { return "00000d95779742dfa06ba61b0b567b9942da774a4354bc86625cd001fb573cd1"; }
     int desiredheight;
     desiredheight = Height;
     if (desiredheight < 0 || desiredheight > nBestHeight)
