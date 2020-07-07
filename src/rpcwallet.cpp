@@ -404,7 +404,7 @@ Value burn(const Array& params, bool fHelp)
     // Comment
     CWalletTx wtx;
     CScript burnScript = CScript() << OP_RETURN;
-    if (params.size() > 1 && !params[1].isNull() && !params[1].get_str().empty()) {
+    if (params.size() > 1 && !params[1].is_null() && !params[1].get_str().empty()) {
         if (params[1].get_str().length() > MAX_OP_RETURN_RELAY - 3)
             throw JSONRPCError(RPC_INVALID_PARAMETER, strprintf("Comment cannot be longer than %u characters", MAX_OP_RETURN_RELAY - 3));
         burnScript << ToByteVector(params[1].get_str());
