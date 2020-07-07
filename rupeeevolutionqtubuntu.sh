@@ -22,10 +22,6 @@ git pull
 qmake "USE_QRCODE=1" "USE_UPNP=1" rupeeevolution-qt.pro
 make
 
-echo "Populate rupeeevolution.conf"
-mkdir ~/.rupeeevolution
-echo -e "nativetor=0\naddnode=rupeeevolution.host\naddnode=rupeeevolution.win\naddnode=rupeeevolution.pro\naddnode=triforce.black" > ~/.rupeeevolution/rupeeevolution.conf
-
 echo "Get Chaindata"
 cd ~/.rupeeevolution || exit
 rm -rf database txleveldb smsgDB
@@ -80,10 +76,6 @@ git pull
 
 qmake "USE_UPNP=1" "USE_QRCODE=1" OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib rupeeevolution-qt.pro
 make
-
-echo "Populate rupeeevolution.conf"
-mkdir ~/.rupeeevolution
-echo -e "nativetor=0\naddnode=rupeeevolution.host\naddnode=rupeeevolution.win\naddnode=rupeeevolution.pro\naddnode=triforce.black" > ~/.rupeeevolution/rupeeevolution.conf
 
 #echo "Get Chaindata"
 #cd ~/.rupeeevolution

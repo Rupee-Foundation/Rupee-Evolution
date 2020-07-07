@@ -23,10 +23,6 @@ sudo yes | cp -rf rupeeevolutiond /usr/bin/
 
 echo "Copied to /usr/bin for ease of use"
 
-echo "Populate rupeeevolution.conf"
-mkdir ~/.rupeeevolution
-echo -e "daemon=1\listen=1\rpcuser=user\rpcpassword=changethispassword\nativetor=0\naddnode=rupeeevolution.host\naddnode=rupeeevolution.win\naddnode=rupeeevolution.pro\naddnode=triforce.black" > ~/.rupeeevolution/rupeeevolution.conf
-
 #echo "Get Chaindata"
 #cd ~/.rupeeevolution || exit
 #rm -rf database txleveldb smsgDB
@@ -82,10 +78,6 @@ make OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl
 sudo yes | cp -rf rupeeevolutiond /usr/bin/
 
 echo "Copied to /usr/bin for ease of use"
-
-echo "Populate rupeeevolution.conf"
-mkdir ~/.rupeeevolution
-echo -e "daemon=1\listen=1\rpcuser=user\rpcpassword=changethispassword\nativetor=0\naddnode=rupeeevolution.host\naddnode=rupeeevolution.win\naddnode=rupeeevolution.pro\naddnode=triforce.black" > ~/.rupeeevolution/rupeeevolution.conf
 
 #echo "Get Chaindata"
 #cd ~/.rupeeevolution
