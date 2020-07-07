@@ -390,6 +390,7 @@ Value burn(const Array& params, bool fHelp)
             "\"transactionid\"  (string) The transaction id.\n"
 
             "\nExamples:\n" +
+
             ("burn", "0.1") +
             ("burn", "0.1 \"Rupee burn test\"") +
             ("burn", "0.1, \"Rupee burn test\""));
@@ -418,7 +419,7 @@ Value burn(const Array& params, bool fHelp)
 
     if (!pwalletMain->CreateTransaction(burnScript, nAmount, sNarr, wtx, reservekey, nFeeRequired, nullptr)) {
         if (nAmount + nFeeRequired > pwalletMain->GetBalance())
-            strError = strprintf("Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!", FormatMoney(nFeeRequired));
+            strError = "Error: This transaction requires a transaction fee of at least " + FormatMoney(nFeeRequired) + " because of its amount, complexity, or use of recently received funds!";
         LogPrintf("BurnCoins() : %s\n", strError);
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
     }
