@@ -76,7 +76,7 @@ static const int64_t MAX_MONEY = 84000000 * COIN; // 84,000,000 RUPEE Max
 static const int64_t COIN_YEAR_REWARD = 0.1 * COIN; // 10% per year
 
 static const int64_t MAINNET_POSFIX = 250; //Mainnet Proof of Stake update not enabled until block 250
-static const int MN_ENFORCEMENT_ACTIVE_HEIGHT = 4500; // Enforce fortunastake payments after this height - BLOCK 4500
+static const int MN_ENFORCEMENT_ACTIVE_HEIGHT = 20000; // Enforce fortunastake payments after this height - BLOCK 20k
 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
