@@ -1,6 +1,6 @@
 #!/bin/bash
 TEMP=/tmp/answer$$
-whiptail --title "Rupee Evolution [RUPEE]"  --menu  "Ubuntu 16.04/18.04 QT Wallet :" 20 0 0 1 "Compile Rupee Evolution QT Ubuntu 16.04" 2 "Update Rupee Evolution QT 16.04 to v3.4 latest" 3 "Compile Rupee Evolution QT Ubuntu 18.04" 4 "Update Rupee Evolution QT 18.04 to v3.4 latest" 2>$TEMP
+whiptail --title "Rupee Evolution [RUPEE]"  --menu  "Ubuntu 16.04/18.04 QT Wallet :" 20 0 0 1 "Compile Rupee Evolution QT Ubuntu 16.04" 2 "Update Rupee Evolution QT 16.04 to latest" 3 "Compile Rupee Evolution QT Ubuntu 18.04" 4 "Update Rupee Evolution QT 18.04 to latest" 2>$TEMP
 choice=`cat $TEMP`
 case $choice in
 1) echo 1 "Compiling Rupee Evolution QT Ubuntu 16.04"
