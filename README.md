@@ -31,7 +31,7 @@ RupeeEvolution [RUPEE] is an anonymous, untraceable, energy efficient, Proof-of-
 Specifications
 ==========================
 * Total number of coins: 84,000,000 RUPEE
-* Ideal block time: 15 seconds
+* Ideal block time: 60 seconds
 * Stake interest: 10% annual static inflation
 * Confirmations: 10 blocks
 * Maturity: 40 blocks
