@@ -21,23 +21,25 @@ Tribus Algo PoW/PoS Hybrid Cryptocurrency
 
 Intro
 ==========================
-RupeeEvolution is a true optional anonymous, untraceable, and secure hybrid cryptocurrency.
+Rupee Evolution is expertimental software, intended to be a liquid time-value storage technology based on the works and technical development of Denarius (D). Rupee Evolution attributes are intended to be a lesser version of said software with heavy modifications to block and reward production economics. Rupee Evolution is intended for global adoption by users wanting to participate in passive reward systems and creation of virtual property. Additionally, Rupee Evolution is intended for global use in charitable donations and supporting a greater well-being and advancement of humanity. 
 
 Ticker: RUPEE
 
-RupeeEvolution [RUPEE] is an anonymous, untraceable, energy efficient, Proof-of-Work (New Tribus Algorithm) and Proof-of-Stake cryptocurrency.
-84,000,000 RUPEE will be created in approx. about 15 years during the PoW phase. RupeeEvolution had a 26.19% Premine of 22,000,000 RUPEE for SWAP, distribution, and marketing.
+Rupee Evolution [RUPEE] is an energy efficient, Proof-of-Work, Proof-of-Stake, Hybrid Collateral Node system. RUPEE is a cryptographic time-value storage technology (TVST) using the Tribus algorithm. RUPEE strives for a checks and balances system in which holders looking to produce stake rewards must compete with miners, miner rewards, thus reducing scheduled staked inflation rate. Collateral Nodes (CN) are not limited to large quanitity holders or powerful buyers. CN rewards are averaged across all active nodes. Small quantity owners can build Collateral Nodes and receive 60% of all stake and miner rewards.
+100,000,000 RUPEE will be created in approximately 40 years. Rupee Evolution will have 3.9% of total rewards premined for uses in swaps from Rupee Blockchain (RUP) and initial launch phase.
 
 Specifications
 ==========================
-* Total number of coins: 84,000,000 RUPEE
-* Ideal block time: 60 seconds
-* Stake interest: 10% annual static inflation
+* Total number of coins: 100,000,000 RUPEE
+* Target block time: 60 seconds
+* Staked Annual Inflation Rate: 20%
+* Stake Rewards: 8%
+* PoW Rewards: Varies, not to exceed 2/block (-60%)
 * Confirmations: 10 blocks
-* Maturity: 40 blocks
+* Reward Maturity: 60 blocks
 * Min stake age: 24 hours
-* Cost of Hybrid Fortuna Stakes: 8,400 RUPEE
-* Hybrid Fortuna Stake Reward: 70% of the current block reward
+* Collateral Requirement for Hybrid Collateral Node: 100 RUPEE
+* Hybrid Collateral Node Reward: 60% of block reward averaged and dispersed across all Collateral Node owners
 * P2P Port: 64630, Testnet Port: 64631
 * RPC Port: 64634, Testnet RPC Port: 64635
 * Fortuna Stake Port: 64638, Testnet Port: 64639
