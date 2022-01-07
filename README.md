@@ -1,4 +1,4 @@
-# RupeeEvolution [RUPEE]
+# Rupee Evolution [RUPEE]
 Tribus Algo PoW/PoS Hybrid Cryptocurrency
 
 ![logo](https://github.com/Rupee-Foundation/Rupee-Evolution/blob/master/src/qt/res/icons/rupeeevolution-256.png?raw=true)
