@@ -25,20 +25,22 @@ Rupee Evolution is expertimental software, intended to be a liquid time-value st
 
 Ticker: RUPEE
 
-Rupee Evolution [RUPEE] is an energy efficient, Proof-of-Work, Proof-of-Stake, Hybrid Collateral Node system. RUPEE is a cryptographic time-value storage technology (TVST) using the Tribus algorithm. RUPEE strives for a checks and balances system in which holders looking to produce stake rewards must compete with miners, miner rewards, thus reducing scheduled staked inflation rate. Collateral Nodes (CN) are not limited to large quanitity holders or powerful buyers. CN rewards are averaged across all active nodes. Small quantity owners can build Collateral Nodes and receive 60% of all stake and miner rewards.
-100,000,000 RUPEE will be created in approximately 40 years. Rupee Evolution will have 3.9% of total rewards premined for uses in swaps from Rupee Blockchain (RUP) and initial launch phase.
+Rupee Evolution [RUPEE] is an energy efficient, Proof-of-Work, Proof-of-Stake, Hybrid Collateral Node (CN) system; a cryptographic time-value storage technology (TVST) using the Tribus algorithm. RUPEE strives for a checks and balances system in which holders looking to produce stake rewards must compete with miners and their rewards, thus reducing scheduled stake inflation rate. Collateral Nodes are not limited to early adopters, large quantity holders or powerful buyers. CN rewards are averaged across all active nodes. Small quantity holders can build Collateral Nodes and receive 60% of all stake and miner rewards.
+100,000,000 RUPEE rewards will be created in approximately 30 years. Rupee Evolution will have 3.9% of total reward supply premined for use in swap phases from Rupee Blockchain [$RUP] and initial launch/listing phase. Rupee Evolution targets a completely transparent launch with NO initial development fund. Premine distribution is primarily based upon merit in conjunction with swap ratios ranging from 1 RUP:1.1 RUPEE to 1000 RUP:1 RUPEE. Swap ratios allow complete support of 84,000,000 [$RUP] exchanged for 3,900,000 [$RUPEE] or until the Rupee Blockchain [$RUP] is no longer supported, in which case any remaining RUPEE will be distributed amoung South East Asian charities in equal quantities of 100 RUPEE.
 
 Specifications
 ==========================
-* Total number of coins: 100,000,000 RUPEE
+* Final supply count: 100,000,000 RUPEE
+* Premine: 3,900,000
 * Target block time: 60 seconds
-* Staked Annual Inflation Rate: 20%
+* Annual Stake Inflation Rate: 20%
 * Stake Rewards: 8%
-* PoW Rewards: Varies, not to exceed 2/block (-60%)
-* Confirmations: 10 blocks
+* PoW Rewards: Varies, not to exceed 1/block (-60%, equally distributed across Collateral Node owners)
+* Confirmation Count: 10 blocks
 * Reward Maturity: 60 blocks
 * Min stake age: 24 hours
-* Collateral Requirement for Hybrid Collateral Node: 100 RUPEE
+* Requirement for Hybrid Collateral Node: 100 RUPEE
+* Required Confirmations for Collateral Node: 240 (approximately 4 hours)
 * Hybrid Collateral Node Reward: 60% of block reward averaged and dispersed across all Collateral Node owners
 * P2P Port: 64630, Testnet Port: 64631
 * RPC Port: 64634, Testnet RPC Port: 64635
@@ -55,17 +57,17 @@ Technology
 * Atomic Swaps using UTXOs (BIP65 CLTV)
 * BIP39 Support (Coin Type 114)
 * Proof of Data (Image/Data Timestamping)
-* Fast 15 Second Block Times
+* 60 Second Block Times
 * Tribus PoW Algorithm comprising of 3 NIST5 algorithms
 * Tribus PoW/PoS Hybrid
 * Full decentralization
 
 LINKS
 ==========================
-* Official Website(https://rupeeevolution.io/)
-* Official Forums(https://rupeeevolutiontalk.org/)
-* RupeeEvolution Twitter(https://twitter.com/rupeeevolutioncoin)
-* RupeeEvolution Discord Chat(https://discord.gg/C64HXbc)
+* Official Website(https://rupee.foundation/)
+* Official Forums(https://blockforums.org/)
+* Rupee Evolution Twitter(https://twitter.com/rupee_evolution)
+* Rupee Evolution Telegram(https://t.me/rupee_evolution)
 
 rupeeevolutionqtubuntu.sh by Buzzkillb
 ===========================
@@ -81,7 +83,7 @@ To turn on nativetor in rupeeevolution.conf
 
 Development process
 ===========================
-
+Development Process for Denarius [$D] as follows:
 Developers work in their own trees, then submit pull requests when
 they think their feature or bug fix is ready.
 
@@ -106,3 +108,9 @@ in this manner will have their corresponding issue labeled 'stagnant'.
 Issues with no commits will be given a similar warning, and closed after
 15 days from their last activity. Issues closed in this manner will be
 labeled 'stale'.
+
+Should new features or additional updates be needed for Rupee Evolution,
+they will be transferred over in the best interest of current/future holders
+and in the best interest of supported charities. Rupee Evolution blockchain
+is intended to be 90% complete after initial launch, 95% after year 1, 99%
+after year 2 and 99.9% after year 3.
