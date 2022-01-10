@@ -1,15 +1,12 @@
 # Rupee Evolution [RUPEE]
-Tribus Algo PoW/PoS Hybrid Cryptocurrency
+A cryptographic time-value storage technology (TVST) using the Tribus algorithm, with PoW/PoS and hybrid Collateral Node (CN) system 
 
 ![logo](https://github.com/Rupee-Foundation/Rupee-Evolution/blob/master/src/qt/res/icons/rupeeevolution-256.png?raw=true)
 
 [![GitHub version](https://img.shields.io/github/release/Rupee-Foundation/Rupee-Evolution.svg)](https://badge.fury.io/gh/Rupee-Foundation%2FRupee-Evolution)
 [![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Rupee-Foundation/Rupee-Evolution/blob/master/COPYING)
 [![RupeeEvolution downloads](https://img.shields.io/github/downloads/Rupee-Foundation/Rupee-Evolution/total.svg?maxAge=2592000)](https://github.com/Rupee-Foundation/Rupee-Evolution/releases)
-[![Join the chat at https://discord.gg/AcThv2y](https://img.shields.io/badge/Discord-Chat-blue.svg?logo=discord)](https://discord.gg/AcThv2y)
-
-[![HitCount](http://hits.dwyl.io/Rupee-Foundation/Rupee-Evolution.svg)](http://hits.dwyl.io/Rupee-Foundation/Rupee-Evolution)
-<a href="https://discord.gg/rqQ9fUW"><img src="https://discordapp.com/api/guilds/334361453320732673/embed.png" alt="Discord server" /></a>
+[![Join the chat at https://t.me/Rupee_Evolution](https://img.shields.io/badge/Telegram-Chat-blue.svg?logo=telegram)](https://t.me/Rupee_Evolution)
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Rupee-Foundation/Rupee-Evolution.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/Rupee-Foundation/Rupee-Evolution.svg)
 
