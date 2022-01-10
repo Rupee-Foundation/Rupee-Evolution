@@ -1,5 +1,5 @@
 # Rupee Evolution [RUPEE]
-A cryptographic time-value storage technology (TVST) using the Tribus algorithm, with PoW/PoS and hybrid Collateral Node (CN) system 
+A cryptographic time-value storage technology (TVST) with hybrid PoW/PoS and Collateral Node (CN) system using Tribus algorithm
 
 ![logo](https://github.com/Rupee-Foundation/Rupee-Evolution/blob/master/src/qt/res/icons/rupeeevolution-256.png?raw=true)
 
