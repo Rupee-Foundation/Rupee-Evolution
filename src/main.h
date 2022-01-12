@@ -25,7 +25,7 @@ class CValidationState;
 //#define START_FORTUNASTAKE_PAYMENTS_TESTNET 1519430400  //Sat, 24 Feb 2018 00:00:00 GMT
 //#define START_FORTUNASTAKE_PAYMENTS 1520985600  //Wed, 14 Mar 2018 00:00:00 GMT
 
-static const int64_t FORTUNA_COLLATERAL = (8400*COIN); // 8,400 RUPEE
+static const int64_t FORTUNA_COLLATERAL = (100*COIN); // 100 RUPEE
 static const int64_t FORTUNA_FEE = (0.010000*COIN); //0.01 RUPEE
 static const int64_t POOL_FEE_AMOUNT = (0.1*COIN); //0.1 RUPEE
 static const int64_t FORTUNA_POOL_MAX = (17800*COIN); //17,800 RUPEE
@@ -56,9 +56,9 @@ class CInv;
 class CRequestTracker;
 class CNode;
 
-// General RupeeEvolution Block Values
+// General Rupee Evolution Block Values
 
-static const int LAST_POW_BLOCK = 8400000; // 8.4 million blocks Approx. ~16 years of Proof of Work before Proof of Stake consensus kicks in
+static const int LAST_POW_BLOCK = 10000000; // Needs correction -> 8.4 million blocks Approx. ~16 years of Proof of Work before Proof of Stake consensus kicks in
 static const int FAIR_LAUNCH_BLOCK = 40000; // Last Block until full block reward starts
 static const unsigned int MAX_BLOCK_SIZE = 1500000; // 1.5MB block hard limit
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2; // 512kb block soft limit, ditto
@@ -72,8 +72,8 @@ static const unsigned int MAX_INV_SZ = 50000;
 static const int64_t MIN_TX_FEE = 1000;
 static const int64_t MIN_TX_FEE_ANON = 10000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
-static const int64_t MAX_MONEY = 84000000 * COIN; // 84,000,000 RUPEE Max
-static const int64_t COIN_YEAR_REWARD = 0.1 * COIN; // 10% per year
+static const int64_t MAX_MONEY = 100000000 * COIN; // 100,000,000 RUPEE Max
+static const int64_t COIN_YEAR_REWARD = 0.2 * COIN; // 20% per year
 
 static const int64_t MAINNET_POSFIX = 250; //Mainnet Proof of Stake update not enabled until block 250
 static const int MN_ENFORCEMENT_ACTIVE_HEIGHT = 2022; // Enforce collateral node payments after this height - BLOCK 2022
