@@ -22,7 +22,7 @@ Rupee Evolution is expertimental software, intended to be a liquid time-value st
 
 Ticker: RUPEE
 
-Rupee Evolution [RUPEE] is an energy efficient, Proof-of-Work, Proof-of-Stake, Hybrid Collateral Node (CN) system; a cryptographic time-value storage technology (TVST) using the Tribus algorithm. RUPEE strives for a checks and balances system in which holders looking to produce stake rewards must compete with miners and their rewards, thus reducing scheduled stake inflation rate. Collateral Nodes are not limited to early adopters, large quantity holders or powerful buyers. CN rewards are averaged across all active nodes. Small quantity holders can build Collateral Nodes and receive 60% of all stake and miner rewards.
+Rupee Evolution [RUPEE] is an energy efficient, Proof-of-Work, Proof-of-Stake, Hybrid Collateral Node (CN) system; a cryptographic time-value storage technology (TVST) using the Tribus algorithm. RUPEE strives for a checks and balances system in which holders looking to produce stake rewards must compete with miners and their rewards. Mining rewards will always be less than the staked inflation rate, thus reducing scheduled stake inflation rate while increasing miner rewards. Collateral Nodes are not limited to early adopters, large quantity holders or powerful buyers. CN rewards are averaged across all active nodes. Small quantity holders can build Collateral Nodes and receive 60% of all stake and miner rewards.
 100,000,000 RUPEE rewards will be created in approximately 30 years. Rupee Evolution will have 3.9% of total reward supply premined for use in swap phases from Rupee Blockchain [$RUP] and initial launch/listing phase. Rupee Evolution targets a completely transparent launch with NO initial development fund. Premine distribution is primarily based upon merit in conjunction with swap ratios ranging from 1 RUP:1.1 RUPEE to 1000 RUP:1 RUPEE. Swap ratios allow complete support of 84,000,000 [$RUP] exchanged for 3,900,000 [$RUPEE] or until the Rupee Blockchain [$RUP] is no longer supported, in which case any remaining RUPEE will be distributed amoung South East Asian charities in equal quantities of 100 RUPEE.
 
 Specifications
@@ -31,8 +31,8 @@ Specifications
 * Premine: 3,900,000
 * Target block time: 60 seconds
 * Annual Stake Inflation Rate: 20%
-* Stake Rewards: 8%
-* PoW Rewards: Varies, not to exceed 1/block (-60%, equally distributed across Collateral Node owners)
+* Stake Rewards: 8% (20% static stake reward -60%, which will be equally distributed across Collateral Nodes)
+* PoW Rewards: Less than 20% staked inflation rate and planned to increase with time (-60%, equally distributed across Collateral Node owners)
 * Confirmation Count: 10 blocks
 * Reward Maturity: 60 blocks
 * Min stake age: 24 hours
